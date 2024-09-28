@@ -2,21 +2,29 @@ import React from "react";
 import styled from "styled-components";
 
 const HeaderContainer = styled.header`
-  background-color: #10102a;
-  padding: 20px;
+  background-image: url("/assets/artboard.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 400px;
   color: white;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 `;
 
 const Logo = styled.div`
-  font-size: 24px;
+  font-size: 48px;
   font-family: "OndoFontCompressed", sans-serif;
+  margin-bottom: 20px;
 `;
 
 const Nav = styled.nav`
   display: flex;
   gap: 15px;
+  font-size: 18px;
 `;
 
 const NavLink = styled.a`
