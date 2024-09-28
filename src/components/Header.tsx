@@ -3,10 +3,11 @@ import styled from "styled-components";
 
 // Container for the entire header section
 const HeaderContainer = styled.header`
-  background-image: url("artboard.jpeg"); /* Replace with actual background */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background-image: url("artboard.jpeg"),
+    linear-gradient(90deg, rgba(106, 13, 173, 0.6), rgba(138, 43, 226, 0.6)); /* Background image with purple gradient overlay */
+  background-size: cover, cover; /* Ensure both layers cover the container */
+  background-position: center, center;
+  background-repeat: no-repeat, no-repeat;
   height: 100vh;
   color: white;
   display: flex;
@@ -24,7 +25,7 @@ const TopNavBar = styled.div`
 
 // Logo on the left
 const Logo = styled.div`
-  font-size: 32px;
+  font-size: 18px;
   font-family: "Lato", sans-serif;
   color: white;
   font-weight: 700;
@@ -131,19 +132,17 @@ const StatBox = styled.div`
 const Header: React.FC = () => {
   return (
     <HeaderContainer>
-      {/* Top Navigation Bar */}
       <TopNavBar>
         <Logo>Board</Logo>
         <Nav>
-          <NavLink href="#products">Products</NavLink>
-          <NavLink href="#apps-games">Apps & Games</NavLink>
-          <NavLink href="#features">Features</NavLink>
-          <NavLink href="#support">Support</NavLink>
-          <NavLink href="#about">About</NavLink>
+          <NavLink href="#products">PRODUCTS</NavLink>
+          <NavLink href="#apps-games">APPS & GAMES</NavLink>
+          <NavLink href="#features">FEATURES</NavLink>
+          <NavLink href="#support">SUPPORT</NavLink>
+          <NavLink href="#about">ABOUT</NavLink>
         </Nav>
       </TopNavBar>
 
-      {/* Main Hero Section */}
       <HeroSection>
         <HeroHeading>Let Your Mind Explore New World</HeroHeading>
         <HeroDescription>
