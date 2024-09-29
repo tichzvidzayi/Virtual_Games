@@ -6,7 +6,7 @@ const VRHeader: React.FC = () => {
       {/* VR Helmet Image */}
       <div className="absolute right-0 top-0 h-full w-full max-w-2xl pointer-events-none">
         <img
-          src="/path/to/vr-helmet-image.png"
+          src="girl.png"
           alt="VR Helmet"
           className="object-cover w-full h-full"
         />
