@@ -1,18 +1,14 @@
 import React from "react";
 
-// Footer component using TailwindCSS
 const Footer: React.FC = () => {
   return (
     <footer className="bg-purple-900 text-white p-12 relative overflow-hidden">
-      {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center opacity-40"
         style={{ backgroundImage: "url('footerbg.png')" }}
       ></div>
 
-      {/* Footer Content Section */}
       <div className="relative z-10 flex flex-wrap justify-between pb-8">
-        {/* Brand Section */}
         <div className="flex-1 mr-8 min-w-[250px]">
           <img src="logo.png" alt="Brand Logo" className="w-36 mb-5" />
           <p className="text-sm text-gray-400 mb-5">
@@ -22,7 +18,6 @@ const Footer: React.FC = () => {
           </p>
         </div>
 
-        {/* Company Section */}
         <div className="flex-1 mx-8 min-w-[200px]">
           <h3 className="text-lg font-semibold mb-5">COMPANY</h3>
           <p className="text-sm text-gray-400 mb-4">Products</p>
@@ -30,7 +25,6 @@ const Footer: React.FC = () => {
           <p className="text-sm text-gray-400 mb-4">Features</p>
         </div>
 
-        {/* Help Section */}
         <div className="flex-1 mx-8 min-w-[200px]">
           <h3 className="text-lg font-semibold mb-5">HELP</h3>
           <p className="text-sm text-gray-400 mb-4">Support</p>
