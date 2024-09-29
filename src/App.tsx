@@ -1,4 +1,5 @@
 import React from "react";
+import "tailwindcss/tailwind.css";
 import Header from "./components/Header";
 //import GameSelection from "./components/GameSelection";
 //import TopGames from "./components/TopGames";
