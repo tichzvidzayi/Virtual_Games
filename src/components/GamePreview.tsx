@@ -25,13 +25,13 @@ const GamePreview: React.FC = () => {
           </p>
         </div>
       </div>
-      {/* Card Section */}
+
       <div className="flex justify-center gap-6">
         {/* Left Image */}
         <div className="w-1/4">
           <img
-            src="https://via.placeholder.com/150"
-            alt="Left Image"
+            src="guy.png"
+            alt="guy Image"
             className="rounded-md object-cover"
           />
         </div>
@@ -39,7 +39,7 @@ const GamePreview: React.FC = () => {
         {/* Center Sneak Peek */}
         <div className="w-1/2 bg-gradient-to-r from-pink-500 to-blue-500 p-4 rounded-lg text-center relative">
           <img
-            src="https://via.placeholder.com/250"
+            src="doggo.png"
             alt="Sneak Peeks"
             className="rounded-md object-cover mx-auto"
           />
@@ -51,7 +51,7 @@ const GamePreview: React.FC = () => {
         {/* Right Image */}
         <div className="w-1/4">
           <img
-            src="https://via.placeholder.com/150"
+            src="girl.png"
             alt="Right Image"
             className="rounded-md object-cover"
           />
@@ -59,10 +59,10 @@ const GamePreview: React.FC = () => {
       </div>
       {/* Button Section */}
       <div className="text-center mt-10 space-x-4">
-        <button className="bg-purple-700 hover:bg-purple-600 py-2 px-6 text-white font-bold rounded-full">
+        <button className="px-10 py-4 text-lg bg-gradient-to-r from-pink-500 to-purple-500 text-white  hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 transition-all clip-parallelogram">
           VIEW ALL
         </button>
-        <button className="bg-pink-500 hover:bg-pink-400 py-2 px-6 text-white font-bold rounded-full">
+        <button className="inline-block px-10 py-4 text-lg bg-gradient-to-r from-purple-500 to-purple-500 text-white hover:bg-gradient-to-r hover:from-purple-500 hover:to-blue-500 transition-all clip-parallelogram">
           PLAY NOW
         </button>
       </div>
