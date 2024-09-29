@@ -3,9 +3,11 @@ import React from "react";
 const VirtualR: React.FC = () => {
   return (
     <div className="flex items-center justify-center h-screen bg-gradient-to-r from-[#1f003b] to-[#3c0071]">
-      <div className="bg-[#2a054e] rounded-2xl p-12 flex items-center gap-8 max-w-5xl w-full shadow-2xl relative">
+      <div className="bg-[#2a054e] rounded-2xl p-12 flex items-center max-w-5xl w-full shadow-2xl relative overflow-hidden">
         {/* Image aligned to the left */}
-        <div className="w-1/2">
+        <div className="w-1/2 flex-shrink-0 -mt-12">
+          {" "}
+          {/* Negative margin to allow protrusion */}
           <img
             src="virtual.png"
             alt="Virtual Gaming"
