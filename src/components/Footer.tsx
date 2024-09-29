@@ -3,10 +3,10 @@ import React from "react";
 // Footer component using TailwindCSS
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-gray-900 text-white p-12 relative overflow-hidden">
+    <footer className="bg-purple-900 text-white p-12 relative overflow-hidden">
       {/* Background Image */}
       <div
-        className="absolute inset-0 bg-cover bg-center opacity-20"
+        className="absolute inset-0 bg-cover bg-center opacity-40"
         style={{ backgroundImage: "url('footerbg.png')" }}
       ></div>
 
