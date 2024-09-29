@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "./components/Header";
-import GameSelection from "./components/GameSelection";
+//import GameSelection from "./components/GameSelection";
 import TopGames from "./components/TopGames";
 import Footer from "./components/Footer";
 import Reviews from "./components/Reviews";
@@ -17,7 +17,7 @@ const App: React.FC = () => {
       <GamePreview />
       <VirtualR />
       <GamesGallery />
-      <GameSelection />
+
       <TopGames />
       <Reviews />
       <Footer />
