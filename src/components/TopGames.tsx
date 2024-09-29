@@ -1,32 +1,5 @@
 import React from "react";
-import styled from "styled-components";
-
-const TopGamesContainer = styled.section`
-  padding: 50px;
-  background-color: #1b1b3a;
-  color: white;
-`;
-
-const Title = styled.h2`
-  font-size: 32px;
-  text-align: center;
-  font-family: "OndoFontCompressed", sans-serif;
-`;
-
-const GameGrid = styled.div`
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-`;
-
-const GameCard = styled.div`
-  background-color: #242447;
-  padding: 20px;
-  border-radius: 10px;
-  width: 200px;
-  text-align: center;
-`;
+import "tailwindcss/tailwind.css"; // Ensure Tailwind CSS is properly configured
 
 interface Game {
   title: string;
@@ -41,17 +14,22 @@ const games: Game[] = [
 
 const TopGames: React.FC = () => {
   return (
-    <TopGamesContainer>
-      <Title>Welcome to the Top Games</Title>
-      <GameGrid>
+    <section className="p-12 bg-[#1b1b3a] text-white">
+      <h2 className="text-4xl text-center font-['OndoFontCompressed']">
+        Welcome to the Top Games
+      </h2>
+      <div className="flex justify-center gap-5 flex-wrap mt-8">
         {games.map((game, index) => (
-          <GameCard key={index}>
-            <h3>{game.title}</h3>
-            <p>{game.description}</p>
-          </GameCard>
+          <div
+            key={index}
+            className="bg-[#242447] p-5 rounded-lg w-[200px] text-center"
+          >
+            <h3 className="text-xl font-bold">{game.title}</h3>
+            <p className="text-sm mt-2">{game.description}</p>
+          </div>
         ))}
-      </GameGrid>
-    </TopGamesContainer>
+      </div>
+    </section>
   );
 };
 

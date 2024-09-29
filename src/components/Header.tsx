@@ -1,177 +1,88 @@
 import React from "react";
-import styled from "styled-components";
-
-// Container for the entire header section
-const HeaderContainer = styled.header`
-  background-image: url("artboard.png"),
-    linear-gradient(90deg, rgba(106, 13, 173, 0.6), rgba(138, 43, 226, 0.6)); /* Background image with purple gradient overlay */
-  background-size: cover, cover; /* Ensure both layers cover the container */
-  background-position: center, center;
-  background-repeat: no-repeat, no-repeat;
-  height: 100vh;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 20px;
-`;
-
-// Top navigation bar container
-const TopNavBar = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-`;
-
-// Logo on the left
-const Logo = styled.div`
-  font-size: 18px;
-  font-family: "Lato", sans-serif;
-  color: white;
-  font-weight: 700;
-`;
-
-// Navigation menu
-const Nav = styled.nav`
-  display: flex;
-  gap: 25px;
-  font-size: 16px;
-`;
-
-const NavLink = styled.a`
-  color: white;
-  text-decoration: none;
-  font-family: "Lato", sans-serif;
-  font-weight: 500;
-  &:hover {
-    color: #f0a500;
-  }
-`;
-
-// Main Hero Section
-const HeroSection = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start; /* Aligns content to the left */
-  text-align: left; /* Left-aligns text */
-  width: 50%; /* Occupies half of the header */
-  padding: 0 20px;
-`;
-
-// Heading text styles
-const HeroHeading = styled.h1`
-  font-size: 64px;
-  font-family: "Lato", sans-serif;
-  line-height: 1.2;
-  margin: 0;
-  font-weight: 700;
-  background: linear-gradient(90deg, #ffd700, #ff00ff, #1e90ff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-`;
-
-// Subheading/Description text styles
-const HeroDescription = styled.p`
-  font-size: 18px;
-  font-family: "Lato", sans-serif;
-  margin: 20px 0;
-  max-width: 600px;
-  color: rgba(255, 255, 255, 0.8);
-`;
-
-// Buttons container
-const ButtonContainer = styled.div`
-  display: flex;
-  gap: 20px;
-  margin: 20px 0;
-`;
-
-// Gradient buttons
-const GradientButton = styled.a`
-  padding: 10px 30px;
-  font-size: 18px;
-  font-family: "Lato", sans-serif;
-  text-decoration: none;
-  color: white;
-  border-radius: 50px;
-  background: linear-gradient(90deg, #ff00ff, #1e90ff);
-  transition: background 0.3s ease;
-
-  &:hover {
-    background: linear-gradient(90deg, #1e90ff, #ff00ff);
-  }
-`;
-
-// Stats Section
-const StatsContainer = styled.div`
-  display: flex;
-  justify-content: flex-start; /* Aligns the stats section to the left */
-  width: 50%; /* Occupies half of the header */
-  gap: 50px;
-  padding: 20px 0;
-`;
-
-// Individual Stat Box
-const StatBox = styled.div`
-  text-align: left; /* Aligns text to the left */
-  font-family: "Lato", sans-serif;
-
-  span {
-    display: block;
-    font-size: 24px;
-    font-weight: bold;
-  }
-
-  p {
-    margin: 0;
-    font-size: 16px;
-    color: rgba(255, 255, 255, 0.7);
-  }
-`;
 
 const Header: React.FC = () => {
   return (
-    <HeaderContainer>
-      <TopNavBar>
-        <Logo>Board</Logo>
-        <Nav>
-          <NavLink href="#products">PRODUCTS</NavLink>
-          <NavLink href="#apps-games">APPS & GAMES</NavLink>
-          <NavLink href="#features">FEATURES</NavLink>
-          <NavLink href="#support">SUPPORT</NavLink>
-          <NavLink href="#about">ABOUT</NavLink>
-        </Nav>
-      </TopNavBar>
+    <header
+      className="bg-cover bg-center bg-no-repeat h-screen text-white flex flex-col justify-between p-8"
+      style={{
+        backgroundImage:
+          'linear-gradient(90deg, rgba(128, 90, 213, 0.7), rgba(91, 33, 182, 0.7)), url("artboard.png")'
+      }}
+    >
+      {/* Top Navigation Bar */}
+      <div className="flex justify-between items-center">
+        <div className="text-lg font-bold font-lato flex items-center gap-2">
+          <img src="logo.png" alt="Board Logo" className="h-8" />
+          <h2>board</h2>
+        </div>
+        <nav className="flex gap-10 text-base">
+          <a href="#products" className="text-white hover:text-purple-300">
+            PRODUCTS
+          </a>
+          <a href="#apps-games" className="text-white hover:text-purple-300">
+            APPS & GAMES
+          </a>
+          <a href="#features" className="text-white hover:text-purple-300">
+            FEATURES
+          </a>
+          <a href="#support" className="text-white hover:text-purple-300">
+            SUPPORT
+          </a>
+          <a href="#about" className="text-white hover:text-purple-300">
+            ABOUT
+          </a>
+          <img src="cart.png" alt="Arrow Icon" className="h-6 ml-4" />
+        </nav>
+      </div>
 
-      <HeroSection>
-        <HeroHeading>Let Your Mind Explore New World</HeroHeading>
-        <HeroDescription>
+      {/* Hero Section */}
+      <div className="flex flex-col items-start text-left w-1/2 mt-20 relative">
+        <h1 className="text-white font-ondo font-extrabold text-6xl leading-tight tracking-widest uppercase">
+          LET YOUR MIND
+          <span className="bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 bg-clip-text text-transparent">
+            EXPLORE
+          </span>{" "}
+          NEW WORLD
+        </h1>
+
+        <p className="text-lg mt-6 mb-8 text-gray-200 leading-relaxed font-lato">
           Playing electronic games, whether through consoles, computers, mobile
           phones or another medium altogether. Gaming is a nuanced term that
           suggests regular gameplay, possibly as a hobby.
-        </HeroDescription>
-        <ButtonContainer>
-          <GradientButton href="#buy">Buy Now</GradientButton>
-          <GradientButton href="#play">Play Now</GradientButton>
-        </ButtonContainer>
-      </HeroSection>
+        </p>
+
+        <div className="flex gap-6">
+          <a
+            href="#buy"
+            className="px-10 py-4 text-lg bg-gradient-to-r from-pink-500 to-purple-500 text-white rounded-full hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 transition-all"
+          >
+            Buy Now
+          </a>
+          <a
+            href="#play"
+            className="px-10 py-4 text-lg bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-full hover:bg-gradient-to-r hover:from-purple-500 hover:to-blue-500 transition-all"
+          >
+            Play Now
+          </a>
+        </div>
+      </div>
 
       {/* Stats Section */}
-      <StatsContainer>
-        <StatBox>
-          <span>300+</span>
-          <p>Unique Style</p>
-        </StatBox>
-        <StatBox>
-          <span>200+</span>
-          <p>Project Finished</p>
-        </StatBox>
-        <StatBox>
-          <span>500+</span>
-          <p>Happy Customer</p>
-        </StatBox>
-      </StatsContainer>
-    </HeaderContainer>
+      <div className="flex gap-12 mt-12">
+        <div className="text-left font-lato">
+          <span className="block text-4xl font-bold">300+</span>
+          <p className="text-gray-300 text-lg">Unique Style</p>
+        </div>
+        <div className="text-left font-lato">
+          <span className="block text-4xl font-bold">200+</span>
+          <p className="text-gray-300 text-lg">Project Finished</p>
+        </div>
+        <div className="text-left font-lato">
+          <span className="block text-4xl font-bold">500+</span>
+          <p className="text-gray-300 text-lg">Happy Customers</p>
+        </div>
+      </div>
+    </header>
   );
 };
 

@@ -42,6 +42,12 @@ const Reviews: React.FC = () => {
             key={review.id}
             className="review-card p-6 bg-purple-800 rounded-lg shadow-lg"
           >
+            <div>
+              <h1 className="text-2xl  bg-purple-500 font-bold mb-4">
+                AAAAAAAAA
+              </h1>
+              <span className="text-xs text-red-300 font-bold">small </span>
+            </div>
             <div className="flex items-center justify-between mb-4">
               {/* Star Rating */}
               <div className="flex text-yellow-400">

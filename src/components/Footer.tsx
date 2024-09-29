@@ -1,154 +1,99 @@
 import React from "react";
-import styled from "styled-components";
 
-// Footer container
-const FooterContainer = styled.footer`
-  background-color: #10102a;
-  padding: 50px;
-  color: white;
-`;
-
-// Wrapper for content sections inside the footer
-const FooterContent = styled.div`
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  text-align: left;
-  padding-bottom: 20px;
-`;
-
-// Section for the brand info and description
-const BrandSection = styled.div`
-  flex: 1;
-  margin-right: 30px;
-  min-width: 250px;
-`;
-
-// Logo image for brand section
-const LogoImage = styled.img`
-  width: 150px;
-  margin-bottom: 20px;
-`;
-
-// Section title styling
-const SectionTitle = styled.h3`
-  font-size: 18px;
-  margin-bottom: 20px;
-`;
-
-// Text styling for footer content
-const FooterText = styled.p`
-  font-size: 14px;
-  color: #c1c1c1;
-  margin-bottom: 20px;
-`;
-
-// Links and text within columns
-const FooterColumn = styled.div`
-  flex: 1;
-  margin: 0 30px;
-  min-width: 200px;
-`;
-
-// Logo list styling
-const LogosContainer = styled.div`
-  display: flex;
-  gap: 20px;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  padding-top: 20px;
-`;
-
-// Individual logos styling
-const Logo = styled.img`
-  height: 30px;
-  opacity: 0.8;
-  transition: opacity 0.3s;
-
-  &:hover {
-    opacity: 1;
-  }
-`;
-
-// Copyright section
-const Copyright = styled.div`
-  border-top: 1px solid #2a2a72;
-  padding-top: 20px;
-  text-align: center;
-  color: #c1c1c1;
-`;
-
-// Social media icons container
-const SocialMediaContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  margin-top: 20px;
-`;
-
-// Social media icons styling
-const SocialIcon = styled.img`
-  width: 25px;
-  cursor: pointer;
-
-  &:hover {
-    opacity: 0.8;
-  }
-`;
-
+// Footer component using TailwindCSS
 const Footer: React.FC = () => {
   return (
-    <FooterContainer>
-      <FooterContent>
-        <BrandSection>
-          <LogoImage src="logo.png" alt="Brand Logo" />
-          <FooterText>
+    <footer className="bg-gray-900 text-white p-12">
+      {/* Footer Content Section */}
+      <div className="flex flex-wrap justify-between pb-8">
+        {/* Brand Section */}
+        <div className="flex-1 mr-8 min-w-[250px]">
+          <img src="logo.png" alt="Brand Logo" className="w-36 mb-5" />
+          <p className="text-sm text-gray-400 mb-5">
             A well-designed gaming header often incorporates elements such as
             game characters, iconic symbols, vibrant colors, and dynamic
             visuals.
-          </FooterText>
-        </BrandSection>
-        <FooterColumn>
-          <SectionTitle>COMPANY</SectionTitle>
-          <FooterText>Products</FooterText>
-          <FooterText>Apps & Games</FooterText>
-          <FooterText>Features</FooterText>
-        </FooterColumn>
-        <FooterColumn>
-          <SectionTitle>HELP</SectionTitle>
-          <FooterText>Support</FooterText>
-          <FooterText>About</FooterText>
-          <FooterText>Contact Us</FooterText>
-        </FooterColumn>
-        <FooterColumn>
-          <SectionTitle>RESOURCES</SectionTitle>
-          <FooterText>Youtube Playlist</FooterText>
-          <FooterText>How To - Blog</FooterText>
-          <FooterText>Terms & Conditions</FooterText>
-        </FooterColumn>
-      </FooterContent>
+          </p>
+        </div>
+
+        {/* Company Section */}
+        <div className="flex-1 mx-8 min-w-[200px]">
+          <h3 className="text-lg font-semibold mb-5">COMPANY</h3>
+          <p className="text-sm text-gray-400 mb-4">Products</p>
+          <p className="text-sm text-gray-400 mb-4">Apps & Games</p>
+          <p className="text-sm text-gray-400 mb-4">Features</p>
+        </div>
+
+        {/* Help Section */}
+        <div className="flex-1 mx-8 min-w-[200px]">
+          <h3 className="text-lg font-semibold mb-5">HELP</h3>
+          <p className="text-sm text-gray-400 mb-4">Support</p>
+          <p className="text-sm text-gray-400 mb-4">About</p>
+          <p className="text-sm text-gray-400 mb-4">Contact Us</p>
+        </div>
+
+        {/* Resources Section */}
+        <div className="flex-1 mx-8 min-w-[200px]">
+          <h3 className="text-lg font-semibold mb-5">RESOURCES</h3>
+          <p className="text-sm text-gray-400 mb-4">Youtube Playlist</p>
+          <p className="text-sm text-gray-400 mb-4">How To - Blog</p>
+          <p className="text-sm text-gray-400 mb-4">Terms & Conditions</p>
+        </div>
+      </div>
 
       {/* Logos Section */}
-      <LogosContainer>
-        <Logo src="twitch.png" alt="Twitch" />
-        <Logo src="roblox.png" alt="Roblox" />
-        <Logo src="asus.png" alt="Asus" />
-        <Logo src="canon.png" alt="Canon" />
-        <Logo src="microsoft.png" alt="Microsoft" />
-      </LogosContainer>
+      <div className="flex justify-between items-center gap-8 flex-wrap py-5">
+        <img
+          src="twitch.png"
+          alt="Twitch"
+          className="h-8 opacity-80 hover:opacity-100 transition-opacity duration-300"
+        />
+        <img
+          src="roblox.png"
+          alt="Roblox"
+          className="h-8 opacity-80 hover:opacity-100 transition-opacity duration-300"
+        />
+        <img
+          src="asus.png"
+          alt="Asus"
+          className="h-8 opacity-80 hover:opacity-100 transition-opacity duration-300"
+        />
+        <img
+          src="canon.png"
+          alt="Canon"
+          className="h-8 opacity-80 hover:opacity-100 transition-opacity duration-300"
+        />
+        <img
+          src="microsoft.png"
+          alt="Microsoft"
+          className="h-8 opacity-80 hover:opacity-100 transition-opacity duration-300"
+        />
+      </div>
 
       {/* Social Media Section */}
-      <SocialMediaContainer>
-        <SocialIcon src="facebook.png" alt="Facebook" />
-        <SocialIcon src="twitter.png" alt="Twitter" />
-        <SocialIcon src="instagram.png" alt="Instagram" />
-      </SocialMediaContainer>
+      <div className="flex justify-center gap-6 mt-5">
+        <img
+          src="facebook.png"
+          alt="Facebook"
+          className="w-6 cursor-pointer hover:opacity-80 transition-opacity"
+        />
+        <img
+          src="twitter.png"
+          alt="Twitter"
+          className="w-6 cursor-pointer hover:opacity-80 transition-opacity"
+        />
+        <img
+          src="instagram.png"
+          alt="Instagram"
+          className="w-6 cursor-pointer hover:opacity-80 transition-opacity"
+        />
+      </div>
 
       {/* Copyright Section */}
-      <Copyright>
+      <div className="border-t border-gray-700 pt-5 mt-5 text-center text-sm text-gray-400">
         <p>© 2024 Board. All Rights Reserved.</p>
-      </Copyright>
-    </FooterContainer>
+      </div>
+    </footer>
   );
 };
 

@@ -1,156 +1,4 @@
 import React, { useState } from "react";
-import styled from "styled-components";
-
-// Container for the entire section
-const GameSelectionContainer = styled.section`
-  background-color: #151530;
-  padding: 50px;
-  color: white;
-  text-align: center;
-`;
-
-// Title
-const Title = styled.h2`
-  font-size: 48px;
-  margin-bottom: 20px;
-  background: linear-gradient(90deg, #ff4dff, #007bff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-`;
-
-// Tabs container for game categories
-const TabsContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin-bottom: 40px;
-`;
-
-// Individual tab button
-const Tab = styled.button<{ active?: boolean }>`
-  padding: 10px 20px;
-  border-radius: 50px;
-  border: none;
-  font-size: 16px;
-  cursor: pointer;
-  background-color: ${({ active }) => (active ? "#ff4dff" : "#202040")};
-  color: ${({ active }) => (active ? "white" : "#c1c1c1")};
-  transition: background-color 0.3s;
-
-  &:hover {
-    background-color: #ff4dff;
-    color: white;
-  }
-`;
-
-// Grid layout for game cards
-const GameGrid = styled.div`
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-`;
-
-// Individual game cards
-const GameCard = styled.div`
-  background-color: #202040;
-  border-radius: 10px;
-  padding: 20px;
-  text-align: left;
-  position: relative;
-  transition: transform 0.3s;
-
-  &:hover {
-    transform: scale(1.05);
-  }
-`;
-
-// Styled image for game card
-const GameImage = styled.img`
-  width: 100%;
-  border-radius: 10px;
-  margin-bottom: 15px;
-`;
-
-// Card title
-const GameTitle = styled.h3`
-  font-size: 18px;
-  margin-bottom: 10px;
-`;
-
-// Author and details under the game title
-const GameAuthor = styled.p`
-  font-size: 14px;
-  color: #c1c1c1;
-  margin-bottom: 20px;
-`;
-
-// Live Demo button inside cards
-const LiveDemoButton = styled.button`
-  background: linear-gradient(90deg, #ff4dff, #007bff);
-  color: white;
-  border: none;
-  border-radius: 20px;
-  padding: 10px 20px;
-  cursor: pointer;
-  position: absolute;
-  bottom: 20px;
-
-  &:hover {
-    background: linear-gradient(90deg, #007bff, #ff4dff);
-  }
-`;
-
-// Promo card container
-const PromoCard = styled.div`
-  background-color: #1f1f3b;
-  border-radius: 20px;
-  padding: 40px;
-  margin-bottom: 50px;
-  display: flex;
-  align-items: center;
-  gap: 30px;
-  color: white;
-`;
-
-// Promo image
-const PromoImage = styled.img`
-  width: 250px;
-  border-radius: 15px;
-`;
-
-// Promo text container
-const PromoTextContainer = styled.div`
-  text-align: left;
-`;
-
-// Promo card title
-const PromoTitle = styled.h3`
-  font-size: 32px;
-  margin-bottom: 10px;
-`;
-
-// Promo card subtitle
-const PromoSubtitle = styled.p`
-  font-size: 18px;
-  margin-bottom: 20px;
-  color: #c1c1c1;
-`;
-
-// Promo button
-const PromoButton = styled.button`
-  background: linear-gradient(90deg, #ff4dff, #007bff);
-  color: white;
-  border: none;
-  border-radius: 50px;
-  padding: 10px 30px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background 0.3s;
-
-  &:hover {
-    background: linear-gradient(90deg, #007bff, #ff4dff);
-  }
-`;
 
 // Sample data for game cards
 const games = [
@@ -170,63 +18,96 @@ const GameSelection: React.FC = () => {
   const [activeTab, setActiveTab] = useState("newest");
 
   return (
-    <GameSelectionContainer>
-      <Title>WELCOME TO THE TOP</Title>
+    <section className="bg-[#151530] py-12 text-white text-center">
+      <h2 className="text-4xl mb-8 bg-gradient-to-r from-pink-500 to-blue-500 text-transparent bg-clip-text">
+        WELCOME TO THE TOP
+      </h2>
 
       {/* Promo Card Section */}
-      <PromoCard>
-        <PromoImage src="transformed.png" alt="Virtual Gaming" />
-        <PromoTextContainer>
-          <PromoTitle>DISCOVER THE VIRTUAL REALITY GAMING</PromoTitle>
-          <PromoSubtitle>
+      <div className="bg-[#1f1f3b] rounded-xl p-10 mb-12 flex items-center gap-8">
+        <img
+          src="transformed.png"
+          alt="Virtual Gaming"
+          className="w-64 rounded-lg"
+        />
+        <div className="text-left">
+          <h3 className="text-3xl mb-4">DISCOVER THE VIRTUAL REALITY GAMING</h3>
+          <p className="text-lg text-gray-400 mb-6">
             A well-designed gaming header often incorporates elements such as
             game characters, iconic symbols, vibrant colors, and dynamic visuals
             to convey excitement, adventure, and the immersive nature of gaming.
-          </PromoSubtitle>
-          <PromoButton>Play Now</PromoButton>
-        </PromoTextContainer>
-      </PromoCard>
+          </p>
+          <button className="bg-gradient-to-r from-pink-500 to-blue-500 text-white rounded-full px-6 py-3 hover:from-blue-500 hover:to-pink-500">
+            Play Now
+          </button>
+        </div>
+      </div>
 
       {/* Tabs for selecting game categories */}
-      <TabsContainer>
-        <Tab
-          active={activeTab === "newest"}
+      <div className="flex justify-center gap-6 mb-10">
+        <button
+          className={`px-6 py-2 rounded-full ${
+            activeTab === "newest"
+              ? "bg-pink-500 text-white"
+              : "bg-[#202040] text-gray-400"
+          } hover:bg-pink-500 hover:text-white`}
           onClick={() => setActiveTab("newest")}
         >
           NEWEST GAMES
-        </Tab>
-        <Tab
-          active={activeTab === "latest"}
+        </button>
+        <button
+          className={`px-6 py-2 rounded-full ${
+            activeTab === "latest"
+              ? "bg-pink-500 text-white"
+              : "bg-[#202040] text-gray-400"
+          } hover:bg-pink-500 hover:text-white`}
           onClick={() => setActiveTab("latest")}
         >
           LATEST GAMES
-        </Tab>
-        <Tab
-          active={activeTab === "fight"}
+        </button>
+        <button
+          className={`px-6 py-2 rounded-full ${
+            activeTab === "fight"
+              ? "bg-pink-500 text-white"
+              : "bg-[#202040] text-gray-400"
+          } hover:bg-pink-500 hover:text-white`}
           onClick={() => setActiveTab("fight")}
         >
           FIGHT GAMES
-        </Tab>
-        <Tab
-          active={activeTab === "sport"}
+        </button>
+        <button
+          className={`px-6 py-2 rounded-full ${
+            activeTab === "sport"
+              ? "bg-pink-500 text-white"
+              : "bg-[#202040] text-gray-400"
+          } hover:bg-pink-500 hover:text-white`}
           onClick={() => setActiveTab("sport")}
         >
           SPORT GAMES
-        </Tab>
-      </TabsContainer>
+        </button>
+      </div>
 
       {/* Grid of game cards */}
-      <GameGrid>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {games.map((game, index) => (
-          <GameCard key={index}>
-            <GameImage src={game.img} alt={game.title} />
-            <GameTitle>{game.title}</GameTitle>
-            <GameAuthor>{game.author}</GameAuthor>
-            <LiveDemoButton>LIVE DEMO</LiveDemoButton>
-          </GameCard>
+          <div
+            key={index}
+            className="bg-[#202040] rounded-lg p-5 text-left relative transition-transform transform hover:scale-105"
+          >
+            <img
+              src={game.img}
+              alt={game.title}
+              className="w-full rounded-lg mb-4"
+            />
+            <h3 className="text-xl mb-2">{game.title}</h3>
+            <p className="text-gray-400 text-sm mb-4">{game.author}</p>
+            <button className="bg-gradient-to-r from-pink-500 to-blue-500 text-white rounded-full px-6 py-2 absolute bottom-5 hover:from-blue-500 hover:to-pink-500">
+              LIVE DEMO
+            </button>
+          </div>
         ))}
-      </GameGrid>
-    </GameSelectionContainer>
+      </div>
+    </section>
   );
 };
 
