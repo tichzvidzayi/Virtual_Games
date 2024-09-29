@@ -7,6 +7,7 @@ import Reviews from "./components/Reviews";
 import { GlobalStyles } from "./styles/GlobalStyles";
 import GamePreview from "./components/GamePreview";
 import VirtualR from "./components/VirtualR";
+import GamesGallery from "./components/GamesGallery";
 
 const App: React.FC = () => {
   return (
@@ -15,6 +16,7 @@ const App: React.FC = () => {
       <Header />
       <GamePreview />
       <VirtualR />
+      <GamesGallery />
       <GameSelection />
       <TopGames />
       <Reviews />
