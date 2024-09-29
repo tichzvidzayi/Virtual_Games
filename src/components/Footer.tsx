@@ -3,9 +3,15 @@ import React from "react";
 // Footer component using TailwindCSS
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-gray-900 text-white p-12">
+    <footer className="bg-gray-900 text-white p-12 relative overflow-hidden">
+      {/* Background Image */}
+      <div
+        className="absolute inset-0 bg-cover bg-center opacity-20"
+        style={{ backgroundImage: "url('footerbg.png')" }}
+      ></div>
+
       {/* Footer Content Section */}
-      <div className="flex flex-wrap justify-between pb-8">
+      <div className="relative z-10 flex flex-wrap justify-between pb-8">
         {/* Brand Section */}
         <div className="flex-1 mr-8 min-w-[250px]">
           <img src="logo.png" alt="Brand Logo" className="w-36 mb-5" />
@@ -42,7 +48,7 @@ const Footer: React.FC = () => {
       </div>
 
       {/* Logos Section */}
-      <div className="flex justify-between items-center gap-8 flex-wrap py-5">
+      <div className="flex justify-between items-center gap-8 flex-wrap py-5 relative z-10">
         <img
           src="twitch.png"
           alt="Twitch"
@@ -71,7 +77,7 @@ const Footer: React.FC = () => {
       </div>
 
       {/* Social Media Section */}
-      <div className="flex justify-center gap-6 mt-5">
+      <div className="flex justify-center gap-6 mt-5 relative z-10">
         <img
           src="facebook.png"
           alt="Facebook"
@@ -90,7 +96,7 @@ const Footer: React.FC = () => {
       </div>
 
       {/* Copyright Section */}
-      <div className="border-t border-gray-700 pt-5 mt-5 text-center text-sm text-gray-400">
+      <div className="border-t border-gray-700 pt-5 mt-5 text-center text-sm text-gray-400 relative z-10">
         <p>© 2024 Board. All Rights Reserved.</p>
       </div>
     </footer>
