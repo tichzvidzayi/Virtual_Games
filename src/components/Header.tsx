@@ -54,13 +54,13 @@ const Header: React.FC = () => {
         <div className="flex gap-6">
           <a
             href="#buy"
-            className="px-10 py-4 text-lg bg-gradient-to-r from-pink-500 to-purple-500 text-white rounded-full hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 transition-all"
+            className="px-10 py-4 text-lg bg-gradient-to-r from-pink-500 to-purple-500 text-white  hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 transition-all clip-parallelogram"
           >
             Buy Now
           </a>
           <a
             href="#play"
-            className="px-10 py-4 text-lg bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-full hover:bg-gradient-to-r hover:from-purple-500 hover:to-blue-500 transition-all"
+            className="inline-block px-10 py-4 text-lg bg-gradient-to-r from-purple-500 to-purple-500 text-white hover:bg-gradient-to-r hover:from-purple-500 hover:to-blue-500 transition-all clip-parallelogram"
           >
             Play Now
           </a>
@@ -82,6 +82,7 @@ const Header: React.FC = () => {
           <p className="text-gray-300 text-lg">Happy Customers</p>
         </div>
       </div>
+      <img src="tape.png" alt="Line" className="w-screen h-auto " />
     </header>
   );
 };

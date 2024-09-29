@@ -5,12 +5,14 @@ import TopGames from "./components/TopGames";
 import Footer from "./components/Footer";
 import Reviews from "./components/Reviews";
 import { GlobalStyles } from "./styles/GlobalStyles";
+import GamePreview from "./components/GamePreview";
 
 const App: React.FC = () => {
   return (
     <>
       <GlobalStyles />
       <Header />
+      <GamePreview />
       <GameSelection />
       <TopGames />
       <Reviews />
