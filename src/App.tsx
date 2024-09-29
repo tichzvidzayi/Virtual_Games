@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import GameSelection from "./components/GameSelection";
 import TopGames from "./components/TopGames";
 import Footer from "./components/Footer";
+import Reviews from "./components/Reviews";
 import { GlobalStyles } from "./styles/GlobalStyles";
 
 const App: React.FC = () => {
@@ -12,6 +13,7 @@ const App: React.FC = () => {
       <Header />
       <GameSelection />
       <TopGames />
+      <Reviews />
       <Footer />
     </>
   );

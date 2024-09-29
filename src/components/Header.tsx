@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 // Container for the entire header section
 const HeaderContainer = styled.header`
-  background-image: url("artboard.jpeg"),
+  background-image: url("artboard.png"),
     linear-gradient(90deg, rgba(106, 13, 173, 0.6), rgba(138, 43, 226, 0.6)); /* Background image with purple gradient overlay */
   background-size: cover, cover; /* Ensure both layers cover the container */
   background-position: center, center;
