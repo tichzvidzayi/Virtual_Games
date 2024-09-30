@@ -16,7 +16,7 @@ const Footer: React.FC = () => {
               width: "127px",
               height: "44px",
               left: "168.3px",
-              fontFamily: "Ondo", // Ensure the font is loaded in your project
+              fontFamily: "Ondo",
               fontWeight: 800,
               fontSize: "39.78px"
             }}
@@ -24,7 +24,7 @@ const Footer: React.FC = () => {
             <img
               src="logo.png"
               alt="Brand Logo"
-              className="mr-2" // Add margin to the right for spacing
+              className="mr-2"
               style={{ width: "59.15px", height: "44.97px" }}
             />
             Board

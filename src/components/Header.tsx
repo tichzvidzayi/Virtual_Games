@@ -6,7 +6,7 @@ const Header: React.FC = () => {
       className="bg-cover bg-center bg-no-repeat h-screen text-white flex flex-col justify-between p-8"
       style={{
         backgroundImage:
-          'linear-gradient(90deg, rgba(128, 90, 213, 0.7), rgba(91, 33, 182, 0.7)), url("artboard.png")'
+          'linear-gradient(90deg, rgba(140, 85, 285, 0.56), rgba(91, 33, 182, 0.1)), url("artboard.png")'
       }}
     >
       {/* Top Navigation Bar */}
@@ -60,7 +60,7 @@ const Header: React.FC = () => {
           </a>
           <a
             href="#play"
-            className="inline-block px-10 py-4 text-lg bg-gradient-to-r from-purple-500 to-purple-500 text-white hover:bg-gradient-to-r hover:from-purple-500 hover:to-blue-500 transition-all clip-parallelogram"
+            className="inline-block px-10 py-4 text-lg bg-gradient-to-r  text-white hover:bg-gradient-to-r hover:from-purple-500 hover:to-blue-500 transition-all clip-parallelogram"
           >
             Play Now
           </a>
