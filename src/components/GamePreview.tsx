@@ -6,7 +6,7 @@ const GamePreview: React.FC = () => {
     <section className="bg-purple-900 text-white py-10 mt-10">
       <div className="flex justify-center mb-10">
         <img
-          src={"../path/to/your/image.png"}
+          src={"logo.png"}
           alt="Game Header"
           className="w-1/2 rounded-md object-cover"
         />
