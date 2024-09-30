@@ -1,107 +1,95 @@
 import React, { useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faStar, faCheckCircle } from "@fortawesome/free-solid-svg-icons";
 
-// Types for Review data
-interface Review {
-  id: number;
-  name: string;
-  company: string;
-  reviewText: string;
-  avatar: string;
-  verified: boolean;
-}
+export default function TestimonialsCarouselSection() {
+  const testimonials = [
+    {
+      text: "One of the standout features of this gaming website is its extensive library of game guides and tutorials. It has helped me level up my skills, conquer challenging quests, and discover hidden secrets within games. The guides are comprehensive, easy to follow, and have undoubtedly elevated my gaming performance.",
+      img: "arlene.png",
+      name: "Arlene McCoy",
+      company: "McDonald's"
+    },
+    {
+      text: "Another aspect that sets this website apart is its vibrant and passionate community. The forum section provides a platform for gamers from all walks of life to connect, share their experiences, and discuss their favorite titles. I've made valuable friendships and found like-minded individuals who share my enthusiasm for gaming.",
+      img: "avatar2.png",
+      name: "Kathryn Murphy",
+      company: "General Electric"
+    },
+    {
+      text: "The support on this platform is exceptional. They are fast, reliable, and always ready to assist. The resources available are also top-notch, ensuring gamers get the best experience possible.",
+      img: "avatar3.png",
+      name: "Ronald Richards",
+      company: "Google"
+    },
+    {
+      text: "I love the design of the platform. It’s user-friendly, and the dark mode makes it easy on the eyes during long gaming sessions. Highly recommend for gamers of all levels!",
+      img: "avatar4.png",
+      name: "Esther Howard",
+      company: "Amazon"
+    }
+  ];
 
-const reviews: Review[] = [
-  {
-    id: 1,
-    name: "Arlene McCoy",
-    company: "McDonald's",
-    reviewText:
-      "One of the standout features of this gaming website is its extensive library of game guides and tutorials. It has helped me level up my skills, conquer challenging quests, and discover hidden secrets within games. The guides are comprehensive, easy to follow, and have undoubtedly elevated my gaming performance.",
-    avatar: "https://randomuser.me/api/portraits/women/44.jpg",
-    verified: true
-  },
-  {
-    id: 2,
-    name: "Kathryn Murphy",
-    company: "General Electric",
-    reviewText:
-      "Another aspect that sets this website apart is its vibrant and passionate community. The forum section provides a platform for gamers from all walks of life to connect, share their experiences, and discuss their favorite titles. I've made valuable friendships and found like-minded individuals who share my enthusiasm for gaming.",
-    avatar: "https://randomuser.me/api/portraits/men/32.jpg",
-    verified: true
-  },
-  {
-    id: 3,
-    name: "Ronald Richards",
-    company: "Google",
-    reviewText:
-      "The support on this platform is exceptional. They are fast, reliable, and always ready to assist. The resources available are also top-notch, ensuring gamers get the best experience possible.",
-    avatar: "https://randomuser.me/api/portraits/men/43.jpg",
-    verified: false
-  },
-  {
-    id: 4,
-    name: "Esther Howard",
-    company: "Amazon",
-    reviewText:
-      "I love the design of the platform. It’s user-friendly, and the dark mode makes it easy on the eyes during long gaming sessions. Highly recommend for gamers of all levels!",
-    avatar: "https://randomuser.me/api/portraits/women/56.jpg",
-    verified: true
-  }
-];
-
-const Reviews: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  // Explicitly specify the type of 'index' as 'number'
   const handleDotClick = (index: number) => {
     setCurrentIndex(index * 2);
   };
 
   return (
-    <div className="review-section bg-gradient-to-b from-purple-900 to-blue-900 text-white p-10 min-h-screen flex flex-col items-center justify-center">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl w-full">
-        {reviews.slice(currentIndex, currentIndex + 2).map((review) => (
-          <div
-            key={review.id}
-            className="p-8 bg-purple-800 rounded-lg shadow-lg relative text-lg"
-          >
-            <div className="flex justify-between items-center mb-6">
-              <div className="flex items-center space-x-4">
-                <img
-                  src={review.avatar}
-                  alt={review.name}
-                  className="w-20 h-20 rounded-full border-4 border-purple-500 shadow-lg"
-                />
-                <div>
-                  <p className="font-bold text-2xl">{review.name}</p>
-                  <p className="text-gray-400">{review.company}</p>
+    <div className="container py-10">
+      <div className="testimonials flex gap-x-8">
+        {testimonials
+          .slice(currentIndex, currentIndex + 2)
+          .map((testimonial, i) => (
+            <div
+              key={i}
+              className="flex flex-col gap-5 rounded-lg border p-12 relative"
+            >
+              <img
+                src="envelope1.png"
+                className="w-[100.25px] absolute -top-[13%] right-[5%]"
+              />
+              <img
+                src="envelope2.png"
+                className="w-[100.25px] absolute -top-[13%] right-[5%]"
+              />
+              <div className="space-y-2">
+                <div className="flex gap-1">
+                  <img src="star.png" alt="plain star icon" />
+                  <img src="star.png" alt="plain star icon" />
+                  <img src="star.png" alt="plain star icon" />
+                  <img src="star.png" alt="plain star icon" />
+                  <img src="star.png" alt="plain star icon" />
                 </div>
+                <p className="text-[16px]">{testimonial.text}</p>
               </div>
-              {review.verified && (
-                <span className="flex items-center text-blue-500 space-x-2">
-                  <FontAwesomeIcon icon={faCheckCircle} />
-                  <span className="text-sm">Verified</span>
-                </span>
-              )}
+              <hr />
+              <div className="flex justify-between">
+                <div className="flex gap-x-3 items-center">
+                  <img
+                    src={testimonial.img}
+                    className="w-[60px] object-contain"
+                    alt={testimonial.name}
+                  />
+                  <div className="leading-relaxed">
+                    <p>{testimonial.name}</p>
+                    <p className="text-[10px]">{testimonial.company}</p>
+                  </div>
+                </div>
+                <p className="flex gap-1 text-[14.65px] items-center">
+                  <span>
+                    <img src="verified.png" className="w-[24.77px]" />
+                  </span>
+                  Verified
+                </p>
+              </div>
             </div>
-            <div className="flex mb-4">
-              {Array.from({ length: 5 }, (_, i) => (
-                <FontAwesomeIcon
-                  key={i}
-                  icon={faStar}
-                  className="text-yellow-400 text-lg"
-                />
-              ))}
-            </div>
-            <p className="text-gray-300 mb-6">{review.reviewText}</p>
-          </div>
-        ))}
+          ))}
       </div>
 
       {/* Dot Navigation */}
       <div className="flex items-center justify-center space-x-3 mt-8">
-        {Array.from({ length: Math.ceil(reviews.length / 2) }).map(
+        {Array.from({ length: Math.ceil(testimonials.length / 2) }).map(
           (_, index) => (
             <button
               key={index}
@@ -115,6 +103,4 @@ const Reviews: React.FC = () => {
       </div>
     </div>
   );
-};
-
-export default Reviews;
+}
