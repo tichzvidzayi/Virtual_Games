@@ -1,7 +1,14 @@
 import React, { useState } from "react";
 
+interface Reviews {
+  text: string;
+  img: string;
+  name: string;
+  company: string;
+}
+
 export default function TestimonialsCarouselSection() {
-  const testimonials = [
+  const testimonials: Reviews[] = [
     {
       text: "One of the standout features of this gaming website is its extensive library of game guides and tutorials. It has helped me level up my skills, conquer challenging quests, and discover hidden secrets within games. The guides are comprehensive, easy to follow, and have undoubtedly elevated my gaming performance.",
       img: "arlene.png",
@@ -36,24 +43,32 @@ export default function TestimonialsCarouselSection() {
   };
 
   return (
-    <div className="container py-10">
+    <div className="container py-10 px-8">
+      {" "}
+      {/* Increased padding to the left and right */}
       <div className="testimonials flex gap-x-8">
         {testimonials
           .slice(currentIndex, currentIndex + 2)
           .map((testimonial, i) => (
             <div
               key={i}
-              className="flex flex-col gap-5 rounded-lg border p-12 relative"
+              className="flex flex-col gap-5 rounded-lg border p-12 relative overflow-visible px-8"
             >
-              <img
-                src="envelope1.png"
-                className="w-[100.25px] absolute -top-[13%] right-[5%]"
-              />
-              <img
-                src="envelope2.png"
-                className="w-[100.25px] absolute -top-[13%] right-[5%]"
-              />
-              <div className="space-y-2">
+              {/* Envelopes positioned to protrude out of the container */}
+              <div className="flex space-x-4 absolute -top-[40px] right-0">
+                <img
+                  src="envelope1.png"
+                  className="w-[50px]"
+                  alt="envelope 1"
+                />
+                <img
+                  src="envelope2.png"
+                  className="w-[50px]"
+                  alt="envelope 2"
+                />
+              </div>
+
+              <div className="space-y-2 mt-10">
                 <div className="flex gap-1">
                   <img src="star.png" alt="plain star icon" />
                   <img src="star.png" alt="plain star icon" />
@@ -78,7 +93,11 @@ export default function TestimonialsCarouselSection() {
                 </div>
                 <p className="flex gap-1 text-[14.65px] items-center">
                   <span>
-                    <img src="verified.png" className="w-[24.77px]" />
+                    <img
+                      src="verified.png"
+                      className="w-[24.77px]"
+                      alt="verified badge"
+                    />
                   </span>
                   Verified
                 </p>
@@ -86,7 +105,6 @@ export default function TestimonialsCarouselSection() {
             </div>
           ))}
       </div>
-
       {/* Dot Navigation */}
       <div className="flex items-center justify-center space-x-3 mt-8">
         {Array.from({ length: Math.ceil(testimonials.length / 2) }).map(
