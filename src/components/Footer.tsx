@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
       <div className="relative z-10 flex flex-wrap justify-between pb-8">
         <div className="flex-1 mr-8 min-w-[250px]">
           <img src="logo.png" alt="Brand Logo" className="w-36 mb-5" />
-          <p className="text-sm text-gray-400 mb-5">
+          <p className="font-lato text-custom-base font-normal leading-custom-lh tracking-custom-ls text-left">
             A well-designed gaming header often incorporates elements such as
             game characters, iconic symbols, vibrant colors, and dynamic
             visuals.

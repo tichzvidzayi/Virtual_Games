@@ -2,7 +2,8 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     fontFamily: {
-      primary: "Poppins"
+      primary: "Poppins",
+      lato: ["Lato", "sans-serif"] // Merging Lato font
     },
     container: {
       padding: {
@@ -24,9 +25,17 @@ module.exports = {
       backgroundImage: {
         hero: "url('./img/bg_hero.svg')"
       },
-      // Add the clip-path extension here
       clipPath: {
         parallelogram: "polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%)"
+      },
+      fontSize: {
+        "custom-base": "16px" // Custom font size
+      },
+      lineHeight: {
+        "custom-lh": "29.62px" // Custom line height
+      },
+      letterSpacing: {
+        "custom-ls": "0.04em" // Custom letter spacing
       }
     }
   },
