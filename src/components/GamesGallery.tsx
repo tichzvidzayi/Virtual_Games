@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "./ui/Button";
 
 const GameGallery: React.FC = () => {
   const games = [
@@ -55,20 +56,10 @@ const GameGallery: React.FC = () => {
 
       {/* Game Categories */}
       <div className="flex justify-center gap-4 mb-16">
-        {["Newest Games", "Latest Games", "Fight Games", "Sport Games"].map(
-          (category, index) => (
-            <button
-              key={index}
-              className={`px-6 py-3 rounded-full font-bold text-lg ${
-                index === 0
-                  ? "bg-gradient-to-r from-pink-500 to-purple-500 text-white"
-                  : "bg-transparent text-purple-200 border border-purple-500"
-              } hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 hover:text-white transition-all`}
-            >
-              {category}
-            </button>
-          )
-        )}
+        <Button btnStyle="fill" btnText="NEWEST GAMES" />
+        <Button btnStyle="outline" btnText="LATEST GAMES" />
+        <Button btnStyle="outline" btnText="FIGHT GAMES" />
+        <Button btnStyle="outline" btnText="SPORT GAMES" />
       </div>
 
       {/* Game Cards Grid */}
@@ -98,9 +89,7 @@ const GameGallery: React.FC = () => {
                   <p className="text-purple-300 text-sm">{game.role}</p>
                 </div>
               </div>
-              <button className="bg-gradient-to-r from-pink-500 to-purple-500 text-white rounded-full px-8 py-3 font-bold text-lg hover:from-purple-500 hover:to-pink-500 transition-all">
-                Live Demo
-              </button>
+              <Button btnStyle="fill" btnText="LIVE DEMO" />
             </div>
           </div>
         ))}

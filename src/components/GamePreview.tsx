@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "./ui/Button";
 
 const GamePreview: React.FC = () => {
   return (
@@ -59,12 +60,8 @@ const GamePreview: React.FC = () => {
       </div>
       {/* Button Section */}
       <div className="text-center mt-10 space-x-4">
-        <button className="px-10 py-4 text-lg bg-gradient-to-r from-pink-500 to-purple-500 text-white  hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 transition-all clip-parallelogram">
-          VIEW ALL
-        </button>
-        <button className="inline-block px-10 py-4 text-lg bg-gradient-to-r from-purple-500 to-purple-500 text-white hover:bg-gradient-to-r hover:from-purple-500 hover:to-blue-500 transition-all clip-parallelogram">
-          PLAY NOW
-        </button>
+        <Button btnStyle="fill" btnText="VIEW ALL" />
+        <Button btnStyle="outline" btnText="PLAY NOW" />
       </div>
     </section>
   );

@@ -1,91 +1,74 @@
-import React from "react";
+import Button from "./ui/Button";
 
-const Header: React.FC = () => {
+export default function HeaderSection() {
+  const records = [
+    { number: "300+", title: "Unique Style" },
+    { number: "200+", title: "Project Finished" },
+    { number: "500+", title: "Happy Customer" }
+  ];
+
   return (
-    <header
-      className="bg-cover bg-center bg-no-repeat h-screen text-white flex flex-col justify-between p-8"
-      style={{
-        backgroundImage:
-          'linear-gradient(90deg, rgba(140, 85, 285, 0.56), rgba(91, 33, 182, 0.1)), url("artboard.png")'
-      }}
-    >
-      {/* Top Navigation Bar */}
-      <div className="flex justify-between items-center">
-        <div className="text-lg font-bold font-lato flex items-center gap-2">
-          <img src="logo.png" alt="Board Logo" className="h-8" />
-          <h2>board</h2>
+    <header className='h-[100vh] w-full bg-[url("artboard.png")] lg:bg-cover mix-blend-color-dodge flex items-center justify-start bg-[100% 10%] bg-no-repeat'>
+      <div className="container flex flex-col gap-5 flex-wrap px-4 lg:px-12">
+        {/* Top Navigation Bar */}
+        <div className="flex justify-between items-center">
+          <div className="text-lg font-bold font-lato flex items-center gap-2">
+            <img src="logo.png" alt="Board Logo" className="h-8" />
+            <h2>board</h2>
+          </div>
+          <nav className="flex gap-10 text-base">
+            <a href="#products" className="text-white hover:text-purple-300">
+              PRODUCTS
+            </a>
+            <a href="#apps-games" className="text-white hover:text-purple-300">
+              APPS & GAMES
+            </a>
+            <a href="#features" className="text-white hover:text-purple-300">
+              FEATURES
+            </a>
+            <a href="#support" className="text-white hover:text-purple-300">
+              SUPPORT
+            </a>
+            <a href="#about" className="text-white hover:text-purple-300">
+              ABOUT
+            </a>
+            <img src="cart.png" alt="Arrow Icon" className="h-6 ml-4" />
+          </nav>
         </div>
-        <nav className="flex gap-10 text-base">
-          <a href="#products" className="text-white hover:text-purple-300">
-            PRODUCTS
-          </a>
-          <a href="#apps-games" className="text-white hover:text-purple-300">
-            APPS & GAMES
-          </a>
-          <a href="#features" className="text-white hover:text-purple-300">
-            FEATURES
-          </a>
-          <a href="#support" className="text-white hover:text-purple-300">
-            SUPPORT
-          </a>
-          <a href="#about" className="text-white hover:text-purple-300">
-            ABOUT
-          </a>
-          <img src="cart.png" alt="Arrow Icon" className="h-6 ml-4" />
-        </nav>
-      </div>
-
-      {/* Hero Section */}
-      <div className="flex flex-col items-start text-left w-1/2 mt-20 relative">
-        <h1 className="text-white font-ondo font-extrabold text-6xl leading-tight tracking-widest uppercase">
-          LET YOUR MIND
-          <span className="bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 bg-clip-text text-transparent">
-            EXPLORE
-          </span>{" "}
-          NEW WORLD
+        {/* Heading Section */}
+        <h1 className="h1 w-full lg:w-1/2">
+          Let your mind <span className="gradient-text">explore</span> new world
         </h1>
 
-        <p className="text-lg mt-6 mb-8 text-gray-200 leading-relaxed font-lato">
+        {/* Description Section */}
+        <p className="w-full lg:w-1/2">
           Playing electronic games, whether through consoles, computers, mobile
-          phones or another medium altogether. Gaming is a nuanced term that
+          phones, or another medium altogether. Gaming is a nuanced term that
           suggests regular gameplay, possibly as a hobby.
         </p>
 
-        <div className="flex gap-6">
-          <a
-            href="#buy"
-            className="px-10 py-4 text-lg bg-gradient-to-r from-pink-500 to-purple-500 text-white  hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 transition-all clip-parallelogram"
-          >
-            Buy Now
-          </a>
-          <a
-            href="#play"
-            className="relative inline-block px-10 py-4 text-lg font-bold text-transparent bg-clip-text border-2 border-transparent hover:border-pink-500 hover:border-opacity-60 transition-all duration-300 clip-parallelogram"
-          >
-            <span className="absolute inset-0 bg-gradient-to-r from-blue-500 to-pink-500 opacity-25"></span>
-            <span className="relative text-white">Play Now</span>
-          </a>
+        {/* Buttons Section */}
+        <div className="flex gap-5">
+          <Button btnStyle="fill" btnText="Buy Now" />
+          <Button btnStyle="outline" btnText="Play Now" />
         </div>
-      </div>
 
-      {/* Stats Section */}
-      <div className="flex gap-12 mt-12">
-        <div className="text-left font-lato">
-          <span className="block text-4xl font-bold">300+</span>
-          <p className="text-gray-300 text-lg">Unique Style</p>
-        </div>
-        <div className="text-left font-lato">
-          <span className="block text-4xl font-bold">200+</span>
-          <p className="text-gray-300 text-lg">Project Finished</p>
-        </div>
-        <div className="text-left font-lato">
-          <span className="block text-4xl font-bold">500+</span>
-          <p className="text-gray-300 text-lg">Happy Customers</p>
+        {/* Records Section */}
+        <div className="flex gap-8 mt-12 justify-start">
+          {records.map((record) => (
+            <div key={record.title} className="text-center">
+              <p
+                className={`h2 ${
+                  record.number.includes("200") ? "gradient-text" : ""
+                }`}
+              >
+                {record.number}
+              </p>
+              <p>{record.title}</p>
+            </div>
+          ))}
         </div>
       </div>
-      <img src="tape.png" alt="Line" className="w-screen h-auto " />
     </header>
   );
-};
-
-export default Header;
+}

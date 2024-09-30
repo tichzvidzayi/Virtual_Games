@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "./ui/Button";
 
 const VirtualR: React.FC = () => {
   return (
@@ -28,9 +29,8 @@ const VirtualR: React.FC = () => {
             to convey excitement, adventure, and the immersive nature of gaming.
           </p>
           {/* Button aligned to the left but part of the right-side content */}
-          <button className="bg-gradient-to-r from-pink-500 to-purple-500 text-white rounded-full px-8 py-4 font-bold text-lg hover:from-purple-500 hover:to-pink-500 transition-all">
-            Play Now
-          </button>
+
+          <Button btnStyle="outline" btnText="PLAY NOW" />
         </div>
       </div>
     </div>
