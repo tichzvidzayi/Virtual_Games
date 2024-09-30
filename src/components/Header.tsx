@@ -60,7 +60,7 @@ const Header: React.FC = () => {
           </a>
           <a
             href="#play"
-            className="relative inline-block px-10 py-4 text-lg font-bold text-transparent bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text border-2 border-transparent hover:border-pink-500 hover:border-opacity-60 transition-all duration-300 clip-parallelogram"
+            className="relative inline-block px-10 py-4 text-lg font-bold text-transparent bg-clip-text border-2 border-transparent hover:border-pink-500 hover:border-opacity-60 transition-all duration-300 clip-parallelogram"
           >
             <span className="absolute inset-0 bg-gradient-to-r from-blue-500 to-pink-500 opacity-25"></span>
             <span className="relative text-white">Play Now</span>

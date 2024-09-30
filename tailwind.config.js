@@ -2,8 +2,8 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     fontFamily: {
-      primary: "Poppins",
-      lato: ["Lato", "sans-serif"] // Merging Lato font
+      lato: ["Lato", "Arial", "sans-serif"], // Merging Lato font
+      ondo: ["Ondo", "Arial", "sans-serif"] // Adding Ondo font
     },
     container: {
       padding: {
@@ -19,11 +19,11 @@ module.exports = {
     },
     extend: {
       colors: {
-        primary: "#222222",
+        primary: "#2d1e6b", // Updated primary color
         secondary: "#F5E6E0"
       },
       backgroundImage: {
-        hero: "url('./img/bg_hero.svg')"
+        hero: "url('./img/bg_hero.svg')" // Hero background image
       },
       clipPath: {
         parallelogram: "polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%)"
@@ -36,6 +36,11 @@ module.exports = {
       },
       letterSpacing: {
         "custom-ls": "0.04em" // Custom letter spacing
+      },
+      gradientColorStops: {
+        "primary-gradient": "rgba(101, 66, 244, 1)", // Additional gradient stops
+        "secondary-gradient": "rgba(249, 118, 255, 1)",
+        "tertiary-gradient": "rgba(181, 0, 152, 1)"
       }
     }
   },
