@@ -10,7 +10,27 @@ const Footer: React.FC = () => {
 
       <div className="relative z-10 flex flex-wrap justify-between pb-8">
         <div className="flex-1 mr-8 min-w-[250px]">
-          <img src="logo.png" alt="Brand Logo" className="w-36 mb-5" />
+          <h2
+            className="flex items-center"
+            style={{
+              width: "127px",
+              height: "44px",
+              left: "168.3px",
+              fontFamily: "Ondo", // Ensure the font is loaded in your project
+              fontWeight: 800,
+              fontSize: "39.78px"
+            }}
+          >
+            <img
+              src="logo.png"
+              alt="Brand Logo"
+              className="mr-2" // Add margin to the right for spacing
+              style={{ width: "59.15px", height: "44.97px" }}
+            />
+            Board
+          </h2>
+          <br></br>
+
           <p className="font-lato text-custom-base font-normal leading-custom-lh tracking-custom-ls text-left">
             A well-designed gaming header often incorporates elements such as
             game characters, iconic symbols, vibrant colors, and dynamic
