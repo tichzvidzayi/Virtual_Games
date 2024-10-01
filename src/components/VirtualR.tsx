@@ -3,9 +3,16 @@ import Button from "./ui/Button";
 
 const VirtualR: React.FC = () => {
   return (
-    <div className="flex items-center justify-center h-screen bg-gradient-to-r from-[#1f003b] to-[#3c0071]">
-      {/* Card with reduced padding and overflow */}
-      <div className="bg-[#2a054e] rounded-2xl p-4 flex items-center gap-8 max-w-5xl w-full shadow-2xl relative">
+    <div className="flex items-center justify-center h-screen">
+      {/* Card with image background */}
+      <div
+        className="rounded-2xl p-4 flex items-center gap-8 max-w-5xl w-full shadow-2xl relative"
+        style={{
+          backgroundImage: 'url("vrbackground.png")',
+          backgroundSize: "cover",
+          backgroundPosition: "center"
+        }} // Replace with your image URL
+      >
         {/* Image container with overflow visible */}
         <div className="w-1/2 relative overflow-visible">
           <img
