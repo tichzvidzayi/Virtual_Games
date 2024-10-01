@@ -41,27 +41,34 @@ npm run dev
 ## Folder Structure
 
 ```bash
-
-├── public/               # Public static assets e.g images, fonts etc
+├── public/               # Public static assets (e.g., images, fonts, etc.)
 ├── src/
-│   ├── components/       # Header.tsx, Footer.tsx, GamePreview.tsx, Reviews.tsx, ui etc.)       
-│   ├          
-│   ├── App.tsx            # Main App component
-│   ├── App.css         
-│   ├── index.css        
-│   ├── main.tsx          
+│   ├── components/       # Reusable components (Header, Footer, GamePreview, Reviews, UI elements, etc.)
+│   │   ├── ui/           # New folder for UI elements
+│   │   │   ├── Footer.tsx        # Footer component
+│   │   │   ├── GamePreview.tsx   # Game preview component
+│   │   │   ├── GamesGallery.tsx  # Games gallery component
+│   │   │   ├── Header.tsx        # Header component
+│   │   │   ├── Reviews.tsx       # Reviews component
+│   │   │   ├── VirtualR.tsx      # Virtual reality-related component
+│   ├── App.tsx           # Main App component
+│   ├── App.css           # Global styles for the app
+│   ├── index.css         # Tailwind CSS imports and global styles
+│   ├── main.tsx          # Entry point of the app
 │   
-├── package.json          # Project packages/dependencies
-├── postcss.config.js     # PostCSS config
-├── tailwind.config.js    # TailwindCSS config
-├── tsconfig.app.json    # TypeScript config
-├── tsconfig.app.tsbuildinfo   
-├── tsconfig.node.json
-├── vite.config.ts
-├── index.html
-├── eslint.config.js
-├── .gitignore            # Ignore files (node_modules/)
-└── README.md             # Project documentation
+├── package.json          # Project dependencies and scripts
+├── postcss.config.js     # PostCSS configuration for Tailwind CSS
+├── tailwind.config.js    # Tailwind CSS configuration
+├── tsconfig.app.json     # TypeScript configuration for the app
+├── tsconfig.app.tsbuildinfo  # TypeScript build info
+├── tsconfig.node.json    # TypeScript config for Node.js
+├── vite.config.ts        # Vite configuration
+├── index.html            # Root HTML file
+├── eslint.config.js      # ESLint configuration for linting
+├── .gitignore            # Specifies files to ignore in Git (e.g., node_modules)
+└── README.md             # Project documentation (this file)
+
+
 ```
 
 ## Future Considerations
