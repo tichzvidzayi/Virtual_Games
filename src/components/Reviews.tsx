@@ -43,82 +43,83 @@ export default function TestimonialsCarouselSection() {
   };
 
   return (
-    <div className="container py-10 px-8">
-      {/* Increased padding to the left and right */}
-      <div className="testimonials flex gap-x-8">
-        {testimonials
-          .slice(currentIndex, currentIndex + 2)
-          .map((testimonial, i) => (
-            <div
-              key={i}
-              className="flex flex-col gap-5 rounded-lg border p-12 relative overflow-visible px-8"
-            >
-              {/* Envelopes positioned to protrude out of the container */}
-              <div className="flex space-x-4 absolute -top-[40px] right-0">
-                <img
-                  src="envelope1.png"
-                  className="w-[50px]"
-                  alt="envelope 1"
-                />
-                <img
-                  src="envelope2.png"
-                  className="w-[50px]"
-                  alt="envelope 2"
-                />
-              </div>
-
-              <div className="space-y-2 mt-10">
-                <div className="flex gap-1">
-                  <img src="star.png" alt="plain star icon" />
-                  <img src="star.png" alt="plain star icon" />
-                  <img src="star.png" alt="plain star icon" />
-                  <img src="star.png" alt="plain star icon" />
-                  <img src="star.png" alt="plain star icon" />
-                </div>
-                <p className="text-[16px]">{testimonial.text}</p>
-              </div>
-              <hr />
-              <div className="flex justify-between">
-                <div className="flex gap-x-3 items-center">
+    <>
+      <div className="container py-10 px-8">
+        {/* Increased padding to the left and right */}
+        <div className="testimonials flex gap-x-8">
+          {testimonials
+            .slice(currentIndex, currentIndex + 2)
+            .map((testimonial, i) => (
+              <div
+                key={i}
+                className="flex flex-col gap-5 rounded-lg border p-12 relative overflow-visible px-8"
+              >
+                {/* Envelopes positioned to protrude out of the container */}
+                <div className="flex space-x-4 absolute -top-[40px] right-0">
                   <img
-                    src={testimonial.img}
-                    className="w-[60px] object-contain"
-                    alt={testimonial.name}
+                    src="envelope1.png"
+                    className="w-[50px]"
+                    alt="envelope 1"
                   />
-                  <div className="leading-relaxed">
-                    <p>{testimonial.name}</p>
-                    <p className="text-[10px]">{testimonial.company}</p>
-                  </div>
+                  <img
+                    src="envelope2.png"
+                    className="w-[50px]"
+                    alt="envelope 2"
+                  />
                 </div>
-                <p className="flex gap-1 text-[14.65px] items-center">
-                  <span>
+
+                <div className="space-y-2 mt-10">
+                  <div className="flex gap-1">
+                    <img src="star.png" alt="plain star icon" />
+                    <img src="star.png" alt="plain star icon" />
+                    <img src="star.png" alt="plain star icon" />
+                    <img src="star.png" alt="plain star icon" />
+                    <img src="star.png" alt="plain star icon" />
+                  </div>
+                  <p className="text-[16px]">{testimonial.text}</p>
+                </div>
+                <hr />
+                <div className="flex justify-between">
+                  <div className="flex gap-x-3 items-center">
                     <img
-                      src="verified.png"
-                      className="w-[24.77px]"
-                      alt="verified badge"
+                      src={testimonial.img}
+                      className="w-[60px] object-contain"
+                      alt={testimonial.name}
                     />
-                  </span>
-                  Verified
-                </p>
+                    <div className="leading-relaxed">
+                      <p>{testimonial.name}</p>
+                      <p className="text-[10px]">{testimonial.company}</p>
+                    </div>
+                  </div>
+                  <p className="flex gap-1 text-[14.65px] items-center">
+                    <span>
+                      <img
+                        src="verified.png"
+                        className="w-[24.77px]"
+                        alt="verified badge"
+                      />
+                    </span>
+                    Verified
+                  </p>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+        </div>
+        {/* Dot Navigation */}
+        <div className="flex items-center justify-center space-x-3 mt-8">
+          {Array.from({ length: Math.ceil(testimonials.length / 2) }).map(
+            (_, index) => (
+              <button
+                key={index}
+                onClick={() => handleDotClick(index)}
+                className={`w-4 h-4 rounded-full ${
+                  currentIndex / 2 === index ? "bg-pink-400" : "bg-gray-400"
+                }`}
+              ></button>
+            )
+          )}
+        </div>
       </div>
-      {/* Dot Navigation */}
-      <div className="flex items-center justify-center space-x-3 mt-8">
-        {Array.from({ length: Math.ceil(testimonials.length / 2) }).map(
-          (_, index) => (
-            <button
-              key={index}
-              onClick={() => handleDotClick(index)}
-              className={`w-4 h-4 rounded-full ${
-                currentIndex / 2 === index ? "bg-pink-400" : "bg-gray-400"
-              }`}
-            ></button>
-          )
-        )}
-      </div>
-      <img src="banner.png" alt="reviews" className="w-full " />
-    </div>
+    </>
   );
 }

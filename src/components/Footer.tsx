@@ -2,118 +2,118 @@ import React from "react";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-purple-900 text-white p-12 relative overflow-hidden">
-      <div
-        className="absolute inset-0 bg-cover bg-center opacity-20"
-        style={{ backgroundImage: "url('footerbg.png')" }}
-      ></div>
+    <>
+      <footer className="bg-purple-900 text-white p-8 relative overflow-hidden">
+        {/* Color Dodge Background */}
+        <div
+          className="absolute inset-0 bg-cover bg-center opacity-20"
+          style={{
+            backgroundImage: "url('footerbg.png')",
+            mixBlendMode: "color-dodge"
+          }}
+        ></div>
 
-      <div className="relative z-10 flex flex-wrap justify-between pb-8">
-        <div className="flex-1 mr-8 min-w-[250px]">
-          <h2
-            className="flex items-center"
-            style={{
-              width: "127px",
-              height: "44px",
-              left: "168.3px",
-              fontFamily: "Ondo",
-              fontWeight: 800,
-              fontSize: "39.78px"
-            }}
-          >
+        {/* Footer Content */}
+        <img src="banner.png" alt="reviews" className="w-full" />
+        <div className="relative z-10 flex flex-wrap pt-4 justify-between items-start pb-6">
+          {/* Brand Section */}
+          <div className="flex-1 mr-8 min-w-[250px]">
+            <h2 className="flex items-center space-x-2 mb-4">
+              <img src="logo.png" alt="Brand Logo" className="w-10 h-10" />
+              <span className="font-bold text-2xl">Board</span>
+            </h2>
+            <p className="text-sm text-gray-300">
+              A well-designed gaming header often incorporates elements such as
+              game characters, iconic symbols, vibrant colors, and dynamic
+              visuals.
+            </p>
+          </div>
+
+          {/* Company Links */}
+          <div className="flex-1 mx-8 min-w-[160px]">
+            <h3 className="text-lg font-semibold mb-3">Company</h3>
+            <ul className="space-y-2 text-sm">
+              <li className="text-gray-400 hover:text-white cursor-pointer">
+                Products
+              </li>
+              <li className="text-gray-400 hover:text-white cursor-pointer">
+                Apps & Games
+              </li>
+              <li className="text-gray-400 hover:text-white cursor-pointer">
+                Features
+              </li>
+            </ul>
+          </div>
+
+          {/* Help Links */}
+          <div className="flex-1 mx-8 min-w-[160px]">
+            <h3 className="text-lg font-semibold mb-3">Help</h3>
+            <ul className="space-y-2 text-sm">
+              <li className="text-gray-400 hover:text-white cursor-pointer">
+                Support
+              </li>
+              <li className="text-gray-400 hover:text-white cursor-pointer">
+                About
+              </li>
+              <li className="text-gray-400 hover:text-white cursor-pointer">
+                Contact Us
+              </li>
+            </ul>
+          </div>
+
+          {/* Resources Links */}
+          <div className="flex-1 mx-8 min-w-[160px]">
+            <h3 className="text-lg font-semibold mb-3">Resources</h3>
+            <ul className="space-y-2 text-sm">
+              <li className="text-gray-400 hover:text-white cursor-pointer">
+                Youtube Playlist
+              </li>
+              <li className="text-gray-400 hover:text-white cursor-pointer">
+                How To - Blog
+              </li>
+              <li className="text-gray-400 hover:text-white cursor-pointer">
+                Terms & Conditions
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Partner Logos */}
+        <div className="relative z-10 flex justify-between items-center gap-6 py-4">
+          {[
+            "twitch.png",
+            "roblox.png",
+            "asus.png",
+            "canon.png",
+            "microsoft.png"
+          ].map((logo, idx) => (
             <img
-              src="logo.png"
-              alt="Brand Logo"
-              className="mr-2"
-              style={{ width: "59.15px", height: "44.97px" }}
+              key={idx}
+              src={logo}
+              alt={logo.split(".")[0]}
+              className="h-6 opacity-80 hover:opacity-100 transition-opacity duration-300"
             />
-            Board
-          </h2>
-          <br></br>
-
-          <p className="font-lato text-custom-base font-normal leading-custom-lh tracking-custom-ls text-left">
-            A well-designed gaming header often incorporates elements such as
-            game characters, iconic symbols, vibrant colors, and dynamic
-            visuals.
-          </p>
+          ))}
         </div>
 
-        <div className="flex-1 mx-8 min-w-[200px]">
-          <h3 className="text-lg font-semibold mb-5">COMPANY</h3>
-          <p className="text-sm text-gray-400 mb-4">Products</p>
-          <p className="text-sm text-gray-400 mb-4">Apps & Games</p>
-          <p className="text-sm text-gray-400 mb-4">Features</p>
+        {/* Social Media Links */}
+        <div className="flex justify-center gap-4 mt-4 relative z-10">
+          {["facebook.png", "twitter.png", "instagram.png"].map((icon, idx) => (
+            <img
+              key={idx}
+              src={icon}
+              alt={icon.split(".")[0]}
+              className="w-6 h-6 rounded-full bg-gray-800 p-1 hover:bg-purple-700 transition-all cursor-pointer"
+            />
+          ))}
         </div>
 
-        <div className="flex-1 mx-8 min-w-[200px]">
-          <h3 className="text-lg font-semibold mb-5">HELP</h3>
-          <p className="text-sm text-gray-400 mb-4">Support</p>
-          <p className="text-sm text-gray-400 mb-4">About</p>
-          <p className="text-sm text-gray-400 mb-4">Contact Us</p>
+        {/* Copyright Section */}
+        <div className="border-t border-gray-700 pt-4 mt-6 text-center text-sm text-gray-400 relative z-10">
+          <p>© 2024 Board. All Rights Reserved.</p>
         </div>
-
-        {/* Resources Section */}
-        <div className="flex-1 mx-8 min-w-[200px]">
-          <h3 className="text-lg font-semibold mb-5">RESOURCES</h3>
-          <p className="text-sm text-gray-400 mb-4">Youtube Playlist</p>
-          <p className="text-sm text-gray-400 mb-4">How To - Blog</p>
-          <p className="text-sm text-gray-400 mb-4">Terms & Conditions</p>
-        </div>
-      </div>
-
-      {/* Logos Section */}
-      <div className="flex justify-between items-center gap-8 flex-wrap py-5 relative z-10">
-        <img
-          src="twitch.png"
-          alt="Twitch"
-          className="h-8 opacity-80 hover:opacity-100 transition-opacity duration-300"
-        />
-        <img
-          src="roblox.png"
-          alt="Roblox"
-          className="h-8 opacity-80 hover:opacity-100 transition-opacity duration-300"
-        />
-        <img
-          src="asus.png"
-          alt="Asus"
-          className="h-8 opacity-80 hover:opacity-100 transition-opacity duration-300"
-        />
-        <img
-          src="canon.png"
-          alt="Canon"
-          className="h-8 opacity-80 hover:opacity-100 transition-opacity duration-300"
-        />
-        <img
-          src="microsoft.png"
-          alt="Microsoft"
-          className="h-8 opacity-80 hover:opacity-100 transition-opacity duration-300"
-        />
-      </div>
-
-      {/* Social Media Section */}
-      <div className="flex justify-center gap-6 mt-5 relative z-10">
-        <img
-          src="facebook.png"
-          alt="Facebook"
-          className="w-6 cursor-pointer hover:opacity-80 transition-opacity"
-        />
-        <img
-          src="twitter.png"
-          alt="Twitter"
-          className="w-6 cursor-pointer hover:opacity-80 transition-opacity"
-        />
-        <img
-          src="instagram.png"
-          alt="Instagram"
-          className="w-6 cursor-pointer hover:opacity-80 transition-opacity"
-        />
-      </div>
-
-      {/* Copyright Section */}
-      <div className="border-t border-gray-700 pt-5 mt-5 text-center text-sm text-gray-400 relative z-10">
-        <p>© 2024 Board. All Rights Reserved.</p>
-      </div>
-    </footer>
+      </footer>
+    </>
   );
 };
 
