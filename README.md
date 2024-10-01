@@ -72,11 +72,9 @@ npm run dev
 -  Allow searching for a Game and Categories
  
  
-
 ## Notes
 
-
-
+The project also has screenshots folder attached 
 
   ```bash
 Author : Tich Zvidzayi 
