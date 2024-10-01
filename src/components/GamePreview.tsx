@@ -5,6 +5,7 @@ const GamePreview: React.FC = () => {
   return (
     <section className="text-white py-10 mt-10 px-2">
       {/* Header Section */}
+
       <div className="text-center mb-10">
         <h1 className="text-white font-ondo font-extrabold text-4xl leading-tight tracking-widest text-center">
           CHOOSE YOUR <br />
