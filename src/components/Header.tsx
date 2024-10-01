@@ -40,7 +40,7 @@ export default function HeaderSection() {
             </nav>
           </div>
 
-          <h1 className="h1 w-full lg:w-1/2">
+          <h1 className="h1 w-full lg:w-1/2 font-ondo">
             Let your mind <span className="gradient-text">explore</span> new
             world
           </h1>

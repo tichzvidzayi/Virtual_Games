@@ -21,14 +21,14 @@ const VirtualR: React.FC = () => {
         </div>
 
         <div className="w-1/2">
-          <h1 className="text-white font-extrabold text-4xl leading-tight tracking-wide mb-4">
+          <h1 className="text-white font-extrabold text-4xl leading-tight tracking-wide mb-4 font-ondo">
             DISCOVER THE{" "}
             <span className="text-transparent bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text">
               VIRTUAL
             </span>{" "}
             REALITY GAMING
           </h1>
-          <p className="text-lg text-gray-200 mb-6 leading-relaxed">
+          <p className="text-lg text-gray-200 mb-6 leading-relaxed font-lato">
             A well-designed gaming header often incorporates elements such as
             game characters, iconic symbols, vibrant colors, and dynamic visuals
             to convey excitement, adventure, and the immersive nature of gaming.

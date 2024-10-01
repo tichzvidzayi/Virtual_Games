@@ -1,11 +1,39 @@
 /* Lato Font import */
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
+/* Ondo Font import */
+@import url('https://fonts.googleapis.com/css2?family=Ondo&display=swap');
+
+
 /* Ondo Font local import */
 @font-face {
   font-family: 'Ondo';
-  src: local('OndoBoldRegular'), url('./assets/fonts/Ondo/FONTSPRINGDEMO-OndoBoldRegular.ttf');
+  src: url('./assets/fonts/Ondo/FONTSPRINGDEMO-OndoRegular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
+
+@font-face {
+  font-family: 'Ondo';
+  src: url('./assets/fonts/Ondo/FONTSPRINGDEMO-OndoBoldRegular.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Ondo';
+  src: url('./assets/fonts/Ondo/FONTSPRINGDEMO-OndoItalic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Ondo';
+  src: url('./assets/fonts/Ondo/FONTSPRINGDEMO-OndoBoldItalic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+
 
 @tailwind base;
 @tailwind components;
@@ -39,14 +67,14 @@
     padding: 1.6rem 3.9rem;
   }
   .btn {
-    @apply uppercase font-extrabold leading-[22.12px] btn-padding skew-x-[-20deg] hover:bg-gradient-to-r hover:to-slate-700 hover:from-gray-950;
+    @apply uppercase font-extrabold leading-[22.12px] btn-padding skew-x-[-20deg] hover:bg-gradient-to-r hover:to-slate-400 hover:from-gray-950;
   }
 
   .btn-fill {
     @apply gradient-bg;
   }
   .btn-outline {
-    @apply border gradient-border hover:bg-red-500;
+    @apply border gradient-border hover:bg-red-600;
   }
 
   .btn-text {

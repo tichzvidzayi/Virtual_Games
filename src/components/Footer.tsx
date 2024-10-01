@@ -5,7 +5,7 @@ const Footer: React.FC = () => {
     <>
       <footer className="bg-purple-900 text-white p-8 relative overflow-hidden">
         <div
-          className="absolute inset-0 bg-cover bg-center opacity-20"
+          className="absolute inset-0 bg-cover bg-center opacity-20 bg-no-repeat mix-blend-color-dodge"
           style={{
             backgroundImage: "url('footerbg.png')",
             mixBlendMode: "color-dodge"
@@ -92,11 +92,11 @@ const Footer: React.FC = () => {
               key={idx}
               src={icon}
               alt={icon.split(".")[0]}
-              className="w-6 h-6 rounded-full bg-gray-800 p-1 hover:bg-purple-700 transition-all cursor-pointer"
+              className="w-6 h-6 rounded-full bg-gray-400 p-1 hover:bg-purple-700 transition-all cursor-pointer"
             />
           ))}
         </div>
-        <div className="border-t border-gray-700 pt-4 mt-6 text-center text-sm text-gray-400 relative z-10">
+        <div className="border-t border-gray-100 pt-4 mt-6 text-center text-sm text-gray-400 relative z-10">
           <p>© 2024 Board. All Rights Reserved.</p>
         </div>
       </footer>
