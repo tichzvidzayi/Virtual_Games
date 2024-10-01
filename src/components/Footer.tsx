@@ -4,7 +4,7 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-purple-900 text-white p-12 relative overflow-hidden">
       <div
-        className="absolute inset-0 bg-cover bg-center opacity-40"
+        className="absolute inset-0 bg-cover bg-center opacity-20"
         style={{ backgroundImage: "url('footerbg.png')" }}
       ></div>
 
