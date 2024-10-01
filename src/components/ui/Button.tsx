@@ -9,7 +9,7 @@ export default function Button({
   btnStyle = "fill",
   btnText = "This Button"
 }: ButtonProps) {
-  // Fill Button
+  //  filled and gradient styles for the button
   if (btnStyle === "fill") {
     return (
       <button className={`btn btn-fill ${className}`}>
@@ -18,7 +18,7 @@ export default function Button({
     );
   }
 
-  // Outline Button
+  // transparent and borderline
   if (btnStyle === "outline") {
     return (
       <button className={`btn btn-outline ${className}`}>

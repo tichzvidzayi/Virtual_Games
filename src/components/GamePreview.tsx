@@ -4,8 +4,6 @@ import Button from "./ui/Button";
 const GamePreview: React.FC = () => {
   return (
     <section className="text-white py-10 mt-10 px-2">
-      {/* Header Section */}
-
       <div className="text-center mb-10">
         <h1 className="text-white font-ondo font-extrabold text-4xl leading-tight tracking-widest text-center">
           CHOOSE YOUR <br />
@@ -20,7 +18,6 @@ const GamePreview: React.FC = () => {
       </div>
 
       <div className="flex justify-center gap-6">
-        {/* Left Image */}
         <div className="w-1/4">
           <img
             src="guy.png"
@@ -29,7 +26,6 @@ const GamePreview: React.FC = () => {
           />
         </div>
 
-        {/* Center Sneak Peek */}
         <div className="w-1/2 p-0 rounded-lg text-center relative shadow-lg">
           <div className="relative mb-10">
             <img
@@ -48,7 +44,6 @@ const GamePreview: React.FC = () => {
           </h2>
         </div>
 
-        {/* Right Image */}
         <div className="w-1/4">
           <img
             src="girl.png"
@@ -57,8 +52,6 @@ const GamePreview: React.FC = () => {
           />
         </div>
       </div>
-
-      {/* Button Section */}
       <div className="text-center mt-10 space-x-4">
         <Button btnStyle="fill" btnText="VIEW ALL" />
         <Button btnStyle="outline" btnText="PLAY NOW" />

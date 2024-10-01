@@ -1,10 +1,9 @@
-import React from "react";
+import React from "react"; // can be skipped
 
 const Footer: React.FC = () => {
   return (
     <>
       <footer className="bg-purple-900 text-white p-8 relative overflow-hidden">
-        {/* Color Dodge Background */}
         <div
           className="absolute inset-0 bg-cover bg-center opacity-20"
           style={{
@@ -13,10 +12,8 @@ const Footer: React.FC = () => {
           }}
         ></div>
 
-        {/* Footer Content */}
         <img src="banner.png" alt="reviews" className="w-full" />
         <div className="relative z-10 flex flex-wrap pt-4 justify-between items-start pb-6">
-          {/* Brand Section */}
           <div className="flex-1 mr-8 min-w-[250px]">
             <h2 className="flex items-center space-x-2 mb-4">
               <img src="logo.png" alt="Brand Logo" className="w-10 h-10" />
@@ -28,8 +25,6 @@ const Footer: React.FC = () => {
               visuals.
             </p>
           </div>
-
-          {/* Company Links */}
           <div className="flex-1 mx-8 min-w-[160px]">
             <h3 className="text-lg font-semibold mb-3">Company</h3>
             <ul className="space-y-2 text-sm">
@@ -45,7 +40,6 @@ const Footer: React.FC = () => {
             </ul>
           </div>
 
-          {/* Help Links */}
           <div className="flex-1 mx-8 min-w-[160px]">
             <h3 className="text-lg font-semibold mb-3">Help</h3>
             <ul className="space-y-2 text-sm">
@@ -60,8 +54,6 @@ const Footer: React.FC = () => {
               </li>
             </ul>
           </div>
-
-          {/* Resources Links */}
           <div className="flex-1 mx-8 min-w-[160px]">
             <h3 className="text-lg font-semibold mb-3">Resources</h3>
             <ul className="space-y-2 text-sm">
@@ -78,7 +70,6 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
-        {/* Partner Logos */}
         <div className="relative z-10 flex justify-between items-center gap-6 py-4">
           {[
             "twitch.png",
@@ -95,8 +86,6 @@ const Footer: React.FC = () => {
             />
           ))}
         </div>
-
-        {/* Social Media Links */}
         <div className="flex justify-center gap-4 mt-4 relative z-10">
           {["facebook.png", "twitter.png", "instagram.png"].map((icon, idx) => (
             <img
@@ -107,8 +96,6 @@ const Footer: React.FC = () => {
             />
           ))}
         </div>
-
-        {/* Copyright Section */}
         <div className="border-t border-gray-700 pt-4 mt-6 text-center text-sm text-gray-400 relative z-10">
           <p>© 2024 Board. All Rights Reserved.</p>
         </div>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState } from "react"; //can be skipped
 
 interface Reviews {
   text: string;
@@ -37,7 +37,6 @@ export default function TestimonialsCarouselSection() {
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // Explicitly specify the type of 'index' as 'number'
   const handleDotClick = (index: number) => {
     setCurrentIndex(index * 2);
   };
@@ -45,7 +44,6 @@ export default function TestimonialsCarouselSection() {
   return (
     <>
       <div className="container py-10 px-8">
-        {/* Increased padding to the left and right */}
         <div className="testimonials flex gap-x-8">
           {testimonials
             .slice(currentIndex, currentIndex + 2)
@@ -54,7 +52,6 @@ export default function TestimonialsCarouselSection() {
                 key={i}
                 className="flex flex-col gap-5 rounded-lg border p-12 relative overflow-visible px-8"
               >
-                {/* Envelopes positioned to protrude out of the container */}
                 <div className="flex space-x-4 absolute -top-[40px] right-0">
                   <img
                     src="envelope1.png"
@@ -105,7 +102,6 @@ export default function TestimonialsCarouselSection() {
               </div>
             ))}
         </div>
-        {/* Dot Navigation */}
         <div className="flex items-center justify-center space-x-3 mt-8">
           {Array.from({ length: Math.ceil(testimonials.length / 2) }).map(
             (_, index) => (
