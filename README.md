@@ -55,6 +55,7 @@ The app will now be running locally, and you can access it in your browser at ht
 │   │   │   ├── Header.tsx        # Header component
 │   │   │   ├── Reviews.tsx       # Reviews component
 │   │   │   ├── VirtualR.tsx      # Virtual reality-related component
+│   ├── assets/          # Assets (fonts: Ondo, Lato)
 │   ├── App.tsx           # Main App component
 │   ├── App.css           # Global styles for the app
 │   ├── index.css         # Tailwind CSS imports and global styles
