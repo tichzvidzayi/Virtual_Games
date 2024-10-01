@@ -10,7 +10,7 @@
 - [License](#license)
 
 ## Project Overview
-This project shows a single page Gaming site showing the Banner, Favourite Games, VR Games, Top Games and Latest Games etc. :
+The **Game Board** project is a single-page gaming site showcasing various sections, including Banner, Favorite Games, VR Games, Top Games, and Latest Games. It provides users with an immersive experience as they explore the most exciting and recent game titles.
 
 
 ## Tech Stack
@@ -73,11 +73,16 @@ npm run dev
 
 ## Future Considerations
 
-- Add animations
+ In future iterations of the project, the following features will be considered:
+
+- Animations: Add interactive animations to enhance user experience.
 - Fetch data from API or database (use Hooks for optimisation)
-- Consider server server-side -rendering (SSR) 
--  Allow searching for a Game and Categories
- 
+- Search Functionality: Implement a fully functional search bar with category filters and debouncing.
+- Dynamic Data: Integrate APIs to fetch real-time data for games and reviews.
+- Server-Side Rendering (SSR): Implement SSR for better performance and SEO.
+- Advanced Filtering: Add options for filtering games by category, genre, and release date.
+
+
  
 ## Notes
 
