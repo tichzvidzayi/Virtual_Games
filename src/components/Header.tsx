@@ -68,6 +68,7 @@ export default function HeaderSection() {
             </div>
           ))}
         </div>
+        <img src="banner.png" alt="reviews" className="w-full" />
       </div>
     </header>
   );

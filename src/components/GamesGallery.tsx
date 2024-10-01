@@ -48,7 +48,7 @@ const GameGallery: React.FC = () => {
   ];
 
   return (
-    <div className="bg-gradient-to-r from-[#1f003b] to-[#3c0071] text-center py-20 px-8">
+    <div className="bg-gradient-to-r from-transparent to-transparent text-center py-20 px-8">
       {/* Section Header */}
       <h1 className="text-white font-extrabold text-5xl mb-12">
         WELCOME TO THE TOP
@@ -67,14 +67,16 @@ const GameGallery: React.FC = () => {
         {games.map((game) => (
           <div
             key={game.id}
-            className="bg-[#2a054e] rounded-lg overflow-hidden shadow-lg transform transition-transform hover:scale-105"
+            className="bg-transparent rounded-lg overflow-hidden shadow-lg transform transition-transform hover:scale-105 relative z-0"
           >
             <img
               src={game.image}
               alt={game.title}
               className="w-full h-60 object-cover"
             />
-            <div className="p-6 text-left">
+            <div className="p-6 text-left bg-transparent">
+              {" "}
+              {/* Ensure transparent background for card content */}
               <h3 className="text-white font-bold text-xl mb-3">
                 {game.title}
               </h3>
@@ -94,6 +96,7 @@ const GameGallery: React.FC = () => {
           </div>
         ))}
       </div>
+      <img src="banner.png" alt="reviews" className="w-full" />
     </div>
   );
 };
