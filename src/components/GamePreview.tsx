@@ -3,12 +3,12 @@ import Button from "./ui/Button";
 
 const GamePreview: React.FC = () => {
   return (
-    <section className="bg-purple-900 text-white py-10 mt-10 px-2">
+    <section className="text-white py-10 mt-10 px-2">
       {/* Header Section */}
       <div className="text-center mb-10">
         <h1 className="text-white font-ondo font-extrabold text-4xl leading-tight tracking-widest text-center">
           CHOOSE YOUR <br />
-          <span className="text-purple-500">FAVORITE</span> GAMES
+          <span className="text-purple-300">FAVORITE</span> GAMES
         </h1>
         <p className="text-lg mt-4 mb-0 text-gray-200 leading-relaxed font-lato text-center">
           Offer sneak peeks and previews of upcoming games, including
@@ -23,13 +23,13 @@ const GamePreview: React.FC = () => {
         <div className="w-1/4">
           <img
             src="guy.png"
-            alt="guy Image"
+            alt="Guy Image"
             className="rounded-md object-cover"
           />
         </div>
 
         {/* Center Sneak Peek */}
-        <div className="w-1/2 p-4 rounded-lg text-center relative">
+        <div className="w-1/2 p-0 rounded-lg text-center relative shadow-lg">
           <div className="relative mb-10">
             <img
               src="doggo.png"
