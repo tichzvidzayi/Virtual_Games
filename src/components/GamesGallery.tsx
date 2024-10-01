@@ -49,12 +49,10 @@ const GameGallery: React.FC = () => {
 
   return (
     <div className="bg-gradient-to-r from-transparent to-transparent text-center py-20 px-8">
-      {/* Section Header */}
       <h1 className="text-white font-extrabold text-5xl mb-12">
         WELCOME TO THE TOP
       </h1>
 
-      {/* Game Categories */}
       <div className="flex justify-center gap-4 mb-16">
         <Button btnStyle="fill" btnText="NEWEST GAMES" />
         <Button btnStyle="outline" btnText="LATEST GAMES" />
@@ -62,7 +60,6 @@ const GameGallery: React.FC = () => {
         <Button btnStyle="outline" btnText="SPORT GAMES" />
       </div>
 
-      {/* Game Cards Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 max-w-7xl mx-auto">
         {games.map((game) => (
           <div
@@ -75,8 +72,6 @@ const GameGallery: React.FC = () => {
               className="w-full h-60 object-cover"
             />
             <div className="p-6 text-left bg-transparent">
-              {" "}
-              {/* Ensure transparent background for card content */}
               <h3 className="text-white font-bold text-xl mb-3">
                 {game.title}
               </h3>

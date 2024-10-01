@@ -2,8 +2,8 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     fontFamily: {
-      lato: ["Lato", "Arial", "sans-serif"], // Merging Lato font
-      ondo: ["Ondo", "Arial", "sans-serif"] // Adding Ondo font
+      lato: ["Lato", "Arial", "sans-serif"],
+      ondo: ["Ondo", "Arial", "sans-serif"]
     },
     container: {
       padding: {
@@ -19,11 +19,11 @@ module.exports = {
     },
     extend: {
       colors: {
-        primary: "#2d1e6b", // Updated primary color
+        primary: "#2d1e6b",
         secondary: "#F5E6E0"
       },
       backgroundImage: {
-        hero: "url('./img/bg_hero.svg')" // Hero background image
+        hero: "url('./img/bg_hero.svg')"
       },
       clipPath: {
         parallelogram: "polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%)"

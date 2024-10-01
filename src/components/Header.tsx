@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"; // can be skipped
 import Button from "./ui/Button";
 
 export default function HeaderSection() {
@@ -12,7 +12,6 @@ export default function HeaderSection() {
     <>
       <header className='h-[100vh] w-full bg-[url("artboard.png")] lg:bg-cover mix-blend-color-dodge flex items-center justify-start bg-[100% 10%] bg-no-repeat'>
         <div className="container flex flex-col gap-5 flex-wrap px-4 lg:px-12">
-          {/* Top Navigation Bar */}
           <div className="flex justify-between items-center">
             <div className="text-lg font-bold font-lato flex items-center gap-2">
               <img src="logo.png" alt="Board Logo" className="h-8" />
@@ -41,31 +40,24 @@ export default function HeaderSection() {
             </nav>
           </div>
 
-          {/* Heading Section */}
-          <h1 className="h1 w-full lg:w-1/2">
+          <h1 className="h1 w-full lg:w-1/2 font-ondo">
             Let your mind <span className="gradient-text">explore</span> new
             world
           </h1>
-
-          {/* Description Section */}
           <p className="w-full lg:w-1/2">
             Playing electronic games, whether through consoles, computers,
             mobile phones, or another medium altogether. Gaming is a nuanced
             term that suggests regular gameplay, possibly as a hobby.
           </p>
 
-          {/* Buttons Section */}
           <div className="flex gap-5">
             <Button btnStyle="fill" btnText="Buy Now" />
             <Button btnStyle="outline" btnText="Play Now" />
           </div>
 
-          {/* Records Section */}
           <div className="flex gap-8 mt-12 justify-start">
             {records.map((record) => (
               <div key={record.number} className="text-center">
-                {" "}
-                {/* Use record.number for unique keys */}
                 <p
                   className={`h2 ${
                     record.number.includes("200") ? "gradient-text" : ""
@@ -81,7 +73,6 @@ export default function HeaderSection() {
       </header>
 
       <div className=" relative flex items-stretch -mt-9">
-        {/* Adjust the value as needed */}
         <img
           src="line.png"
           alt="line_image"
