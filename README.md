@@ -37,6 +37,8 @@ npm install
   ```bash
 npm run dev
 ```
+The app will now be running locally, and you can access it in your browser at http://localhost:5173/
+(5173 is the default port and can be different)
 
 ## Folder Structure
 
