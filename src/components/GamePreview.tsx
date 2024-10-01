@@ -62,6 +62,7 @@ const GamePreview: React.FC = () => {
         <Button btnStyle="fill" btnText="VIEW ALL" />
         <Button btnStyle="outline" btnText="PLAY NOW" />
       </div>
+      <img src="banner.png" alt="reviews" className="w-full" />
     </section>
   );
 };

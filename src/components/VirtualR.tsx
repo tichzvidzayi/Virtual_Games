@@ -3,7 +3,7 @@ import Button from "./ui/Button";
 
 const VirtualR: React.FC = () => {
   return (
-    <div className="flex items-center justify-center h-screen">
+    <div className="flex flex-col items-center justify-center h-screen">
       {/* Card with image background */}
       <div
         className="rounded-2xl p-4 flex items-center gap-8 max-w-5xl w-full shadow-2xl relative"
@@ -38,6 +38,11 @@ const VirtualR: React.FC = () => {
           </p>
           <Button btnStyle="outline" btnText="PLAY NOW" />
         </div>
+      </div>
+
+      {/* Banner image below the card */}
+      <div className="mt-8 w-full">
+        <img src="banner.png" alt="Reviews" className="w-full h-auto" />
       </div>
     </div>
   );

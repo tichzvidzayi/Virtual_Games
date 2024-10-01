@@ -44,7 +44,6 @@ export default function TestimonialsCarouselSection() {
 
   return (
     <div className="container py-10 px-8">
-      {" "}
       {/* Increased padding to the left and right */}
       <div className="testimonials flex gap-x-8">
         {testimonials
@@ -119,6 +118,7 @@ export default function TestimonialsCarouselSection() {
           )
         )}
       </div>
+      <img src="banner.png" alt="reviews" className="w-full " />
     </div>
   );
 }
