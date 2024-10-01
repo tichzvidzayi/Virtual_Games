@@ -44,6 +44,8 @@ The app will now be running locally, and you can access it in your browser at ht
 
 ```bash
 ├── public/               # Public static assets (e.g., images, fonts, etc.)
+├── screenshots/          # Project Screenshots
+├──  node_modules/        # Project dependencies (downloaded after running npm install)
 ├── src/
 │   ├── components/       # Reusable components (Header, Footer, GamePreview, Reviews, UI elements, etc.)
 │   │   ├── ui/           # New folder for UI elements
