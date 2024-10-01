@@ -16,7 +16,6 @@ The **Game Board** project is a single-page gaming site showcasing various secti
 ## Tech Stack
 - **Frontend:** React, TypeScript
 - **Build Tool:**   Vite, npm
-- **State Management:** React Hooks (`useState`)
 - **Styling:** Tailwind CSS for UI development
 - **Other Tools:**  Prettier
 
