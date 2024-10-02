@@ -15,16 +15,20 @@ const Footer: React.FC = () => {
                   Board
                 </span>
               </h2>
-              <p className="text-sm text-white leading-relaxed font-lato">
-                A well-designed gaming header often incorporates elements such
-                as game characters, iconic symbols, vibrant colors, and dynamic
-                visuals.
-              </p>
+              <div className="w-96 h-auto  p-4 rounded-lg">
+                <p className="text-sm font-lato px-4 text-white leading-relaxed">
+                  A well-designed gaming header often incorporates elements such
+                  as game characters, iconic symbols, vibrant colors, and
+                  dynamic visuals.
+                </p>
+              </div>
             </div>
 
-            <div className="flex-1 min-w-[100px] space-y-4">
-              <h3 className="text-lg font-semibold mb-3 text-white">Company</h3>
-              <ul className="space-y-2 text-sm">
+            <div className="flex-2 min-w-[100px] space-y-4 px-2">
+              <h3 className="text-lg font-semibold font-lato  mb-3 text-white">
+                Company
+              </h3>
+              <ul className="space-y-6 text-sm">
                 <li className="text-white hover:text-white cursor-pointer">
                   Products
                 </li>
@@ -37,9 +41,9 @@ const Footer: React.FC = () => {
               </ul>
             </div>
 
-            <div className="flex-1 min-w-[100px] space-y-4">
+            <div className="flex-2 min-w-[100px] space-y-4  ">
               <h3 className="text-lg font-semibold mb-3 text-white">Help</h3>
-              <ul className="space-y-2 text-sm">
+              <ul className="space-y-6 text-sm">
                 <li className="text-white hover:text-white cursor-pointer">
                   Support
                 </li>
@@ -52,11 +56,11 @@ const Footer: React.FC = () => {
               </ul>
             </div>
 
-            <div className="flex-1 min-w-[100px] space-y-4">
+            <div className="flex-1 min-w-[100px] space-y-4 ">
               <h3 className="text-lg font-semibold mb-3 text-white">
                 Resources
               </h3>
-              <ul className="space-y-2 text-sm">
+              <ul className="space-y-6 text-sm">
                 <li className="text-white hover:text-white cursor-pointer">
                   Youtube Playlist
                 </li>
@@ -82,7 +86,7 @@ const Footer: React.FC = () => {
                 key={idx}
                 src={logo}
                 alt={logo.split(".")[0]}
-                className="h-6 opacity-80 hover:opacity-100 transition-opacity duration-300"
+                className="h-6"
               />
             ))}
           </div>
