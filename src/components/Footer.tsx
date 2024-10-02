@@ -3,21 +3,21 @@ import React from "react";
 const Footer: React.FC = () => {
   return (
     <>
-      <div className='bg-[url("footerbg.png")] w-full bg-cover bg-no-repeat mix-blend-color-dodge py-10 px-6'>
-        {/* attach a line_image banner */}
+      <div className='bg-[url("footerbg.png")] w-full bg-cover bg-no-repeat mix-blend-color-dodge py-10 px-6 relative'>
+        {/* Attach a line_image banner */}
         <img
           src="banner.png"
           alt="reviews"
-          className="w-full pb-4 mb-10 mix-blend-color-dodge"
+          className="w-full pb-8 mb-10 mix-blend-color-dodge absolute top-0 left-0 z-20"
         />
 
-        <div className="container px-2 !lg:px-10 gap-6 md:gap-10">
-          <div className="relative z-10 flex flex-wrap justify-start items-start pt-6 pb-6 gap-2 md:gap-4 lg:gap-4">
+        <div className="container pt-6 px-2 !lg:px-10 gap-6 md:gap-10 relative z-10">
+          <div className="flex flex-wrap justify-start items-start pt-6 pb-6 gap-2 md:gap-4 lg:gap-4">
             <div className="flex-1 min-w-[250px] space-y-4">
-              <div className="w-96 h-auto  p-4 rounded-lg">
+              <div className="w-96 h-auto p-4 rounded-lg">
                 <h2 className="flex px-4 items-center space-x-2 mb-4">
-                  <img src="logo.png" alt="Brand Logo" className="w-10  h-10" />
-                  <span className=" font-bold text-2xl text-white font-ondo">
+                  <img src="logo.png" alt="Brand Logo" className="w-10 h-10" />
+                  <span className="font-bold text-2xl text-white font-ondo">
                     Board
                   </span>
                 </h2>
@@ -30,7 +30,7 @@ const Footer: React.FC = () => {
             </div>
 
             <div className="flex-0 min-w-[100px] space-y-4 px-5">
-              <h3 className="text-lg font-semibold font-lato  mb-3 text-white">
+              <h3 className="text-lg font-semibold font-lato mb-3 text-white">
                 Company
               </h3>
               <ul className="space-y-6 text-sm">
@@ -78,7 +78,8 @@ const Footer: React.FC = () => {
               </ul>
             </div>
           </div>
-          {/* partenrs and sponsors logos */}
+
+          {/* Partners and sponsors logos */}
           <div className="relative z-10 flex justify-start items-center gap-20 py-4 px-8 flex-wrap">
             {[
               "twitch.png",
@@ -95,7 +96,8 @@ const Footer: React.FC = () => {
               />
             ))}
           </div>
-          {/* Social images icons*/}
+
+          {/* Social images icons */}
           <div className="flex justify-start items-center pt-10 py-4 px-8">
             <div className="flex gap-6">
               {["facebook.png", "twitter.png", "instagram.png"].map(
