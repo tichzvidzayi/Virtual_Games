@@ -18,9 +18,11 @@ export default function HeaderSection() {
               <h2>board</h2>
             </div>
             <nav className="flex gap-10 text-base">
+              {/*header menu items */}
               <a href="#products" className="text-white hover:text-purple-300">
                 PRODUCTS
               </a>
+
               <a
                 href="#apps-games"
                 className="text-white hover:text-purple-300"
@@ -71,7 +73,7 @@ export default function HeaderSection() {
           </div>
         </div>
       </header>
-
+      {/* add the line_image underneath the hearder container */}
       <div className=" relative flex items-stretch -mt-9">
         <img
           src="line.png"
