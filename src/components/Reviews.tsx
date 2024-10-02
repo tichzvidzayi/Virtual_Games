@@ -1,4 +1,4 @@
-import React, { useState } from "react"; //can be skipped
+import React, { useState } from "react"; // can be skipped
 
 interface Reviews {
   text: string;
@@ -43,8 +43,8 @@ export default function TestimonialsCarouselSection() {
 
   return (
     <>
-      <div className="container py-10 px-8">
-        <div className="testimonials flex gap-x-8">
+      <div className="container py-8 px-10">
+        <div className="testimonials flex gap-x-8 px-6">
           {testimonials
             .slice(currentIndex, currentIndex + 2)
             .map((testimonial, i) => (
