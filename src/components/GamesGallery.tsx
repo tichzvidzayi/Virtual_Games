@@ -52,7 +52,7 @@ const GameGallery: React.FC = () => {
 
   return (
     <div className="bg-gradient-to-r from-transparent to-transparent text-center py-20 px-8">
-      <h1 className="text-white font-extrabold text-5xl mb-12">
+      <h1 className="text-white font-extrabold font-ondo text-5xl mb-12">
         WELCOME TO THE TOP
       </h1>
 

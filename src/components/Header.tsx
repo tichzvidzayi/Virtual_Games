@@ -52,7 +52,7 @@ export default function HeaderSection() {
             term that suggests regular gameplay, possibly as a hobby.
           </p>
 
-          <div className="flex gap-5">
+          <div className="flex gap-5 font-ondo">
             <Button btnStyle="fill" btnText="Buy Now" />
             <Button btnStyle="outline" btnText="Play Now" />
           </div>
@@ -61,13 +61,13 @@ export default function HeaderSection() {
             {records.map((record) => (
               <div key={record.number} className="text-center">
                 <p
-                  className={`h2 ${
+                  className={`h2  font-ondo ${
                     record.number.includes("200") ? "gradient-text" : ""
                   }`}
                 >
                   {record.number}
                 </p>
-                <p>{record.title}</p>
+                <p className=" font-lato">{record.title}</p>
               </div>
             ))}
           </div>

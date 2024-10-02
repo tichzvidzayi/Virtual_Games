@@ -33,7 +33,7 @@ const VirtualR: React.FC = () => {
             game characters, iconic symbols, vibrant colors, and dynamic visuals
             to convey excitement, adventure, and the immersive nature of gaming.
           </p>
-          <Button btnStyle="outline" btnText="PLAY NOW" />
+          <Button className="font-ondo" btnStyle="outline" btnText="PLAY NOW" />
         </div>
       </div>
       <div className="mt-8 w-full">

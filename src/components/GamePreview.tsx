@@ -52,7 +52,7 @@ const GamePreview: React.FC = () => {
           />
         </div>
       </div>
-      <div className="text-center mt-10 space-x-4">
+      <div className="text-center mt-10 space-x-4 font-ondo">
         <Button btnStyle="fill" btnText="VIEW ALL" />
         <Button btnStyle="outline" btnText="PLAY NOW" />
       </div>
