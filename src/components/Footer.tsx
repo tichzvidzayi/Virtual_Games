@@ -5,7 +5,11 @@ const Footer: React.FC = () => {
     <>
       <div className='bg-[url("footerbg.png")] w-full bg-cover bg-no-repeat mix-blend-color-dodge py-10 px-6'>
         {/* attach a line_image banner */}
-        <img src="banner.png" alt="reviews" className="w-full pb-4 mb-10" />
+        <img
+          src="banner.png"
+          alt="reviews"
+          className="w-full pb-4 mb-10 mix-blend-color-dodge"
+        />
 
         <div className="container px-2 !lg:px-10 gap-6 md:gap-10">
           <div className="relative z-10 flex flex-wrap justify-start items-start pt-6 pb-6 gap-2 md:gap-4 lg:gap-4">
