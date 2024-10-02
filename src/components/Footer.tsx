@@ -4,6 +4,7 @@ const Footer: React.FC = () => {
   return (
     <>
       <div className='bg-[url("footerbg.png")] w-full bg-cover bg-no-repeat mix-blend-color-dodge py-10 px-6'>
+        {/* attach a line_image banner */}
         <img src="banner.png" alt="reviews" className="w-full pb-4 mb-10" />
 
         <div className="container px-2 !lg:px-10 gap-6 md:gap-10">
@@ -73,7 +74,7 @@ const Footer: React.FC = () => {
               </ul>
             </div>
           </div>
-
+          {/* partenrs and sponsors logos */}
           <div className="relative z-10 flex justify-start items-center gap-20 py-4 px-8 flex-wrap">
             {[
               "twitch.png",
@@ -90,7 +91,7 @@ const Footer: React.FC = () => {
               />
             ))}
           </div>
-
+          {/* Social images icons*/}
           <div className="flex justify-start items-center pt-10 py-4 px-8">
             <div className="flex gap-6">
               {["facebook.png", "twitter.png", "instagram.png"].map(

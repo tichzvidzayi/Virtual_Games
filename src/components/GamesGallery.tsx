@@ -2,6 +2,9 @@ import React from "react";
 import Button from "./ui/Button";
 
 const GameGallery: React.FC = () => {
+  {
+    /* Sample data for the games gallery */
+  }
   const games = [
     {
       id: 1,
@@ -59,7 +62,7 @@ const GameGallery: React.FC = () => {
         <Button btnStyle="outline" btnText="FIGHT GAMES" />
         <Button btnStyle="outline" btnText="SPORT GAMES" />
       </div>
-
+      {/* create a grid of the games 3 x */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 max-w-7xl mx-auto">
         {games.map((game) => (
           <div

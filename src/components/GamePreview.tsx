@@ -16,7 +16,7 @@ const GamePreview: React.FC = () => {
           trailers, screenshots, and information about release.
         </p>
       </div>
-
+      {/* Preview for the video games */}
       <div className="flex justify-center gap-6">
         <div className="w-1/4">
           <img
