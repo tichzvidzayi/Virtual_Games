@@ -4,11 +4,10 @@ const Footer: React.FC = () => {
   return (
     <>
       <div className='bg-[url("footerbg.png")] w-full bg-cover bg-no-repeat mix-blend-color-dodge py-10 px-6'>
-        <img src="banner.png" alt="reviews" className="w-full pb-10 mb-10" />
+        <img src="banner.png" alt="reviews" className="w-full pb-4 mb-10" />
 
         <div className="container px-2 !lg:px-10 gap-6 md:gap-10">
           <div className="relative z-10 flex flex-wrap justify-start items-start pt-6 pb-6 gap-2 md:gap-4 lg:gap-4">
-            {/* Logo and Description */}
             <div className="flex-1 min-w-[250px] space-y-4">
               <h2 className="flex items-center space-x-2 mb-4">
                 <img src="logo.png" alt="Brand Logo" className="w-10 h-10" />
@@ -23,7 +22,6 @@ const Footer: React.FC = () => {
               </p>
             </div>
 
-            {/* Navigation Links - Company */}
             <div className="flex-1 min-w-[100px] space-y-4">
               <h3 className="text-lg font-semibold mb-3 text-white">Company</h3>
               <ul className="space-y-2 text-sm">
@@ -39,7 +37,6 @@ const Footer: React.FC = () => {
               </ul>
             </div>
 
-            {/* Navigation Links - Help */}
             <div className="flex-1 min-w-[100px] space-y-4">
               <h3 className="text-lg font-semibold mb-3 text-white">Help</h3>
               <ul className="space-y-2 text-sm">
@@ -55,7 +52,6 @@ const Footer: React.FC = () => {
               </ul>
             </div>
 
-            {/* Navigation Links - Resources */}
             <div className="flex-1 min-w-[100px] space-y-4">
               <h3 className="text-lg font-semibold mb-3 text-white">
                 Resources
@@ -74,7 +70,6 @@ const Footer: React.FC = () => {
             </div>
           </div>
 
-          {/* Company Logos */}
           <div className="relative z-10 flex justify-start items-center gap-6 py-4 !px-2 flex-wrap">
             {[
               "twitch.png",
@@ -92,7 +87,6 @@ const Footer: React.FC = () => {
             ))}
           </div>
 
-          {/* Social Icons */}
           <div className="flex justify-center gap-4 mt-6 relative z-10">
             {["facebook.png", "twitter.png", "instagram.png"].map(
               (icon, idx) => (
@@ -106,7 +100,6 @@ const Footer: React.FC = () => {
             )}
           </div>
 
-          {/* Footer Disclaimer */}
           <div className="pt-4 mt-6 text-center text-sm text-white relative z-10">
             <p>© 2024 Board. All Rights Reserved.</p>
           </div>

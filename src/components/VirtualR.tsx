@@ -37,7 +37,11 @@ const VirtualR: React.FC = () => {
         </div>
       </div>
       <div className="mt-8 w-full">
-        <img src="banner.png" alt="Reviews" className="w-full h-auto" />
+        <img
+          src="banner.png"
+          alt="Reviews"
+          className="w-full h-auto pt-8 pb-8"
+        />
       </div>
     </div>
   );

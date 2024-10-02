@@ -91,7 +91,7 @@ const GameGallery: React.FC = () => {
           </div>
         ))}
       </div>
-      <img src="banner.png" alt="reviews" className="w-full" />
+      <img src="banner.png" alt="reviews" className="w-full pt-8 pb-8" />
     </div>
   );
 };
