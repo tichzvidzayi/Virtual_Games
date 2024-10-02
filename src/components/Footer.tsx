@@ -9,13 +9,13 @@ const Footer: React.FC = () => {
         <div className="container px-2 !lg:px-10 gap-6 md:gap-10">
           <div className="relative z-10 flex flex-wrap justify-start items-start pt-6 pb-6 gap-2 md:gap-4 lg:gap-4">
             <div className="flex-1 min-w-[250px] space-y-4">
-              <h2 className="flex items-center space-x-2 mb-4">
-                <img src="logo.png" alt="Brand Logo" className="w-10 h-10" />
-                <span className="font-bold text-2xl text-white font-ondo">
-                  Board
-                </span>
-              </h2>
               <div className="w-96 h-auto  p-4 rounded-lg">
+                <h2 className="flex px-4 items-center space-x-2 mb-4">
+                  <img src="logo.png" alt="Brand Logo" className="w-10  h-10" />
+                  <span className=" font-bold text-2xl text-white font-ondo">
+                    Board
+                  </span>
+                </h2>
                 <p className="text-sm font-lato px-4 text-white leading-relaxed">
                   A well-designed gaming header often incorporates elements such
                   as game characters, iconic symbols, vibrant colors, and
@@ -24,7 +24,7 @@ const Footer: React.FC = () => {
               </div>
             </div>
 
-            <div className="flex-2 min-w-[100px] space-y-4 px-2">
+            <div className="flex-0 min-w-[100px] space-y-4 px-5">
               <h3 className="text-lg font-semibold font-lato  mb-3 text-white">
                 Company
               </h3>
@@ -41,7 +41,7 @@ const Footer: React.FC = () => {
               </ul>
             </div>
 
-            <div className="flex-2 min-w-[100px] space-y-4  ">
+            <div className="flex-2 min-w-[100px] space-y-4 px-5 ">
               <h3 className="text-lg font-semibold mb-3 text-white">Help</h3>
               <ul className="space-y-6 text-sm">
                 <li className="text-white hover:text-white cursor-pointer">
@@ -74,7 +74,7 @@ const Footer: React.FC = () => {
             </div>
           </div>
 
-          <div className="relative z-10 flex justify-start items-center gap-6 py-4 !px-2 flex-wrap">
+          <div className="relative z-10 flex justify-start items-center gap-16 py-4 px-20 flex-wrap">
             {[
               "twitch.png",
               "roblox.png",
