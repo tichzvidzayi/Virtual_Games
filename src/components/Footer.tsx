@@ -74,7 +74,7 @@ const Footer: React.FC = () => {
             </div>
           </div>
 
-          <div className="relative z-10 flex justify-start items-center gap-16 py-4 px-20 flex-wrap">
+          <div className="relative z-10 flex justify-start items-center gap-20 py-4 px-8 flex-wrap">
             {[
               "twitch.png",
               "roblox.png",
@@ -91,21 +91,23 @@ const Footer: React.FC = () => {
             ))}
           </div>
 
-          <div className="flex justify-center gap-4 mt-6 relative z-10">
-            {["facebook.png", "twitter.png", "instagram.png"].map(
-              (icon, idx) => (
-                <img
-                  key={idx}
-                  src={icon}
-                  alt={icon.split(".")[0]}
-                  className="w-6 h-6 rounded-full bg-gray-500 p-1 hover:bg-purple-700 transition-all cursor-pointer"
-                />
-              )
-            )}
-          </div>
+          <div className="flex justify-start items-center pt-10 py-4 px-8">
+            <div className="flex gap-6">
+              {["facebook.png", "twitter.png", "instagram.png"].map(
+                (icon, idx) => (
+                  <img
+                    key={idx}
+                    src={icon}
+                    alt={icon.split(".")[0]}
+                    className="w-8 h-8 rounded-full"
+                  />
+                )
+              )}
+            </div>
 
-          <div className="pt-4 mt-6 text-center text-sm text-white relative z-10">
-            <p>© 2024 Board. All Rights Reserved.</p>
+            <div className="text-sm text-white ml-8">
+              <p>© 2024 Board. All Rights Reserved.</p>
+            </div>
           </div>
         </div>
       </div>
