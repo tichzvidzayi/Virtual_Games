@@ -2,6 +2,9 @@ import React from "react";
 import Button from "./ui/Button";
 
 const GameGallery: React.FC = () => {
+  {
+    /* Sample data for the games gallery */
+  }
   const games = [
     {
       id: 1,
@@ -49,7 +52,7 @@ const GameGallery: React.FC = () => {
 
   return (
     <div className="bg-gradient-to-r from-transparent to-transparent text-center py-20 px-8">
-      <h1 className="text-white font-extrabold text-5xl mb-12">
+      <h1 className="text-white font-extrabold font-ondo text-5xl mb-12">
         WELCOME TO THE TOP
       </h1>
 
@@ -59,7 +62,7 @@ const GameGallery: React.FC = () => {
         <Button btnStyle="outline" btnText="FIGHT GAMES" />
         <Button btnStyle="outline" btnText="SPORT GAMES" />
       </div>
-
+      {/* create a grid of the games 3 x */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 max-w-7xl mx-auto">
         {games.map((game) => (
           <div
@@ -91,7 +94,7 @@ const GameGallery: React.FC = () => {
           </div>
         ))}
       </div>
-      <img src="banner.png" alt="reviews" className="w-full" />
+      <img src="banner.png" alt="reviews" className="w-full pt-8 pb-8" />
     </div>
   );
 };

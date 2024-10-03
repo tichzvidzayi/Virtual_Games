@@ -18,9 +18,11 @@ export default function HeaderSection() {
               <h2>board</h2>
             </div>
             <nav className="flex gap-10 text-base">
+              {/*header menu items */}
               <a href="#products" className="text-white hover:text-purple-300">
                 PRODUCTS
               </a>
+
               <a
                 href="#apps-games"
                 className="text-white hover:text-purple-300"
@@ -50,7 +52,7 @@ export default function HeaderSection() {
             term that suggests regular gameplay, possibly as a hobby.
           </p>
 
-          <div className="flex gap-5">
+          <div className="flex gap-5 font-ondo">
             <Button btnStyle="fill" btnText="Buy Now" />
             <Button btnStyle="outline" btnText="Play Now" />
           </div>
@@ -59,19 +61,19 @@ export default function HeaderSection() {
             {records.map((record) => (
               <div key={record.number} className="text-center">
                 <p
-                  className={`h2 ${
+                  className={`h2  font-ondo ${
                     record.number.includes("200") ? "gradient-text" : ""
                   }`}
                 >
                   {record.number}
                 </p>
-                <p>{record.title}</p>
+                <p className=" font-lato">{record.title}</p>
               </div>
             ))}
           </div>
         </div>
       </header>
-
+      {/* add the line_image underneath the hearder container */}
       <div className=" relative flex items-stretch -mt-9">
         <img
           src="line.png"

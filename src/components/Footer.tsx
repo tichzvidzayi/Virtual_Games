@@ -1,105 +1,123 @@
-import React from "react"; // can be skipped
+import React from "react";
 
 const Footer: React.FC = () => {
   return (
     <>
-      <footer className="bg-purple-900 text-white p-8 relative overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center opacity-20 bg-no-repeat mix-blend-color-dodge"
-          style={{
-            backgroundImage: "url('footerbg.png')",
-            mixBlendMode: "color-dodge"
-          }}
-        ></div>
+      <div className='bg-[url("footerbg.png")] w-full bg-cover bg-no-repeat mix-blend-color-dodge py-10 px-6 relative'>
+        {/* Attach a line_image banner */}
+        <img
+          src="banner.png"
+          alt="reviews"
+          className="w-full pb-8 mb-10 mix-blend-color-dodge absolute top-0 left-0 z-20"
+        />
 
-        <img src="banner.png" alt="reviews" className="w-full" />
-        <div className="relative z-10 flex flex-wrap pt-4 justify-between items-start pb-6">
-          <div className="flex-1 mr-8 min-w-[250px]">
-            <h2 className="flex items-center space-x-2 mb-4">
-              <img src="logo.png" alt="Brand Logo" className="w-10 h-10" />
-              <span className="font-bold text-2xl">Board</span>
-            </h2>
-            <p className="text-sm text-gray-300">
-              A well-designed gaming header often incorporates elements such as
-              game characters, iconic symbols, vibrant colors, and dynamic
-              visuals.
-            </p>
-          </div>
-          <div className="flex-1 mx-8 min-w-[160px]">
-            <h3 className="text-lg font-semibold mb-3">Company</h3>
-            <ul className="space-y-2 text-sm">
-              <li className="text-gray-400 hover:text-white cursor-pointer">
-                Products
-              </li>
-              <li className="text-gray-400 hover:text-white cursor-pointer">
-                Apps & Games
-              </li>
-              <li className="text-gray-400 hover:text-white cursor-pointer">
-                Features
-              </li>
-            </ul>
+        <div className="container pt-6 px-2 !lg:px-10 gap-6 md:gap-10 relative z-10">
+          <div className="flex flex-wrap justify-start items-start pt-6 pb-6 gap-2 md:gap-4 lg:gap-4">
+            <div className="flex-1 min-w-[250px] space-y-4">
+              <div className="w-96 h-auto p-4 rounded-lg">
+                <h2 className="flex px-4 items-center space-x-2 mb-4">
+                  <img src="logo.png" alt="Brand Logo" className="w-10 h-10" />
+                  <span className="font-bold text-2xl text-white font-ondo">
+                    Board
+                  </span>
+                </h2>
+                <p className="text-sm font-lato px-4 text-white leading-relaxed">
+                  A well-designed gaming header often incorporates elements such
+                  as game characters, iconic symbols, vibrant colors, and
+                  dynamic visuals.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex-0 min-w-[100px] space-y-4 px-5">
+              <h3 className="text-lg font-semibold font-lato mb-3 text-white">
+                Company
+              </h3>
+              <ul className="space-y-6 text-sm">
+                <li className="text-white hover:text-white cursor-pointer">
+                  Products
+                </li>
+                <li className="text-white hover:text-white cursor-pointer">
+                  Apps & Games
+                </li>
+                <li className="text-white hover:text-white cursor-pointer">
+                  Features
+                </li>
+              </ul>
+            </div>
+
+            <div className="flex-2 min-w-[100px] space-y-4 px-5 ">
+              <h3 className="text-lg font-semibold mb-3 text-white">Help</h3>
+              <ul className="space-y-6 text-sm">
+                <li className="text-white hover:text-white cursor-pointer">
+                  Support
+                </li>
+                <li className="text-white hover:text-white cursor-pointer">
+                  About
+                </li>
+                <li className="text-white hover:text-white cursor-pointer">
+                  Contact Us
+                </li>
+              </ul>
+            </div>
+
+            <div className="flex-1 min-w-[100px] space-y-4 ">
+              <h3 className="text-lg font-semibold mb-3 text-white">
+                Resources
+              </h3>
+              <ul className="space-y-6 text-sm">
+                <li className="text-white hover:text-white cursor-pointer">
+                  Youtube Playlist
+                </li>
+                <li className="text-white hover:text-white cursor-pointer">
+                  How To - Blog
+                </li>
+                <li className="text-white hover:text-white cursor-pointer">
+                  Terms & Conditions
+                </li>
+              </ul>
+            </div>
           </div>
 
-          <div className="flex-1 mx-8 min-w-[160px]">
-            <h3 className="text-lg font-semibold mb-3">Help</h3>
-            <ul className="space-y-2 text-sm">
-              <li className="text-gray-400 hover:text-white cursor-pointer">
-                Support
-              </li>
-              <li className="text-gray-400 hover:text-white cursor-pointer">
-                About
-              </li>
-              <li className="text-gray-400 hover:text-white cursor-pointer">
-                Contact Us
-              </li>
-            </ul>
+          {/* Partners and sponsors logos */}
+          <div className="relative z-10 flex justify-start items-center gap-20 py-4 px-8 flex-wrap">
+            {[
+              "twitch.png",
+              "roblox.png",
+              "asus.png",
+              "canon.png",
+              "microsoft.png"
+            ].map((logo, idx) => (
+              <img
+                key={idx}
+                src={logo}
+                alt={logo.split(".")[0]}
+                className="h-6"
+              />
+            ))}
           </div>
-          <div className="flex-1 mx-8 min-w-[160px]">
-            <h3 className="text-lg font-semibold mb-3">Resources</h3>
-            <ul className="space-y-2 text-sm">
-              <li className="text-gray-400 hover:text-white cursor-pointer">
-                Youtube Playlist
-              </li>
-              <li className="text-gray-400 hover:text-white cursor-pointer">
-                How To - Blog
-              </li>
-              <li className="text-gray-400 hover:text-white cursor-pointer">
-                Terms & Conditions
-              </li>
-            </ul>
-          </div>
-        </div>
 
-        <div className="relative z-10 flex justify-between items-center gap-6 py-4">
-          {[
-            "twitch.png",
-            "roblox.png",
-            "asus.png",
-            "canon.png",
-            "microsoft.png"
-          ].map((logo, idx) => (
-            <img
-              key={idx}
-              src={logo}
-              alt={logo.split(".")[0]}
-              className="h-6 opacity-80 hover:opacity-100 transition-opacity duration-300"
-            />
-          ))}
+          {/* Social images icons */}
+          <div className="flex justify-start items-center pt-10 py-4 px-8">
+            <div className="flex gap-6">
+              {["facebook.png", "twitter.png", "instagram.png"].map(
+                (icon, idx) => (
+                  <img
+                    key={idx}
+                    src={icon}
+                    alt={icon.split(".")[0]}
+                    className="w-8 h-8 rounded-full"
+                  />
+                )
+              )}
+            </div>
+
+            <div className="text-sm text-white ml-8">
+              <p>© 2024 Board. All Rights Reserved.</p>
+            </div>
+          </div>
         </div>
-        <div className="flex justify-center gap-4 mt-4 relative z-10">
-          {["facebook.png", "twitter.png", "instagram.png"].map((icon, idx) => (
-            <img
-              key={idx}
-              src={icon}
-              alt={icon.split(".")[0]}
-              className="w-6 h-6 rounded-full bg-gray-400 p-1 hover:bg-purple-700 transition-all cursor-pointer"
-            />
-          ))}
-        </div>
-        <div className="border-t border-gray-100 pt-4 mt-6 text-center text-sm text-gray-400 relative z-10">
-          <p>© 2024 Board. All Rights Reserved.</p>
-        </div>
-      </footer>
+      </div>
     </>
   );
 };
