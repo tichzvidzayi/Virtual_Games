@@ -1,4 +1,4 @@
-import React, { useState } from "react"; // can be skipped
+import { useState } from "react"; // can be skipped
 
 interface Reviews {
   text: string;

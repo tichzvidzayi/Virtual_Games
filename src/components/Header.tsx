@@ -1,4 +1,4 @@
-import React from "react"; // can be skipped
+//import React from "react"; // can be skipped
 import Button from "./ui/Button";
 
 export default function HeaderSection() {
