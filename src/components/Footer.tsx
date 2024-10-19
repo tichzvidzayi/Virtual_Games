@@ -1,9 +1,15 @@
 import React from "react";
+import footerbg from "../../public/footerbg.png";
 
 const Footer: React.FC = () => {
   return (
     <>
-      <div className='bg-[url("footerbg.png")] w-full bg-cover bg-no-repeat mix-blend-color-dodge py-10 px-6 relative'>
+      <div
+        className="w-full bg-cover bg-no-repeat mix-blend-color-dodge py-10 px-6 relative"
+        style={{
+          backgroundImage: `url(${footerbg})`
+        }}
+      >
         {/* Attach a line_image banner */}
         <img
           src="banner.png"
