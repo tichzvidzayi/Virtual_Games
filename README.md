@@ -89,7 +89,7 @@ The app will now be running locally, and you can access it in your browser at ht
 
  ## 
  ```
- Live on : https://tichvr.netlify.app/
+ Live on -> : https://tichvr.netlify.app/
  ```
 ## Notes
 
