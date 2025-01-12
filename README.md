@@ -1,6 +1,4 @@
 # Virtual Games
-
-
 ## Table of Contents
 - [Project Overview](#project-overview)
 - [Tech Stack](#tech-stack)
