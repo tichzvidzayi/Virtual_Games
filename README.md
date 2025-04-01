@@ -1,4 +1,4 @@
-# Virtual Games
+## Virtual Games
 
 ## Table of Contents
 - [Project Overview](#project-overview)
