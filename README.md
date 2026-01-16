@@ -1,4 +1,4 @@
-## Virtual Games
+# Virtual Games (VR)
 
 ## Table of Contents
 - [Project Overview](#project-overview)
