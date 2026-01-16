@@ -1,4 +1,7 @@
-import React from "react"; // can be skipped
+//import React from "react"; // can be skipped
+
+import artboard from "../../public/artboard.png";
+
 import Button from "./ui/Button";
 
 export default function HeaderSection() {
@@ -10,7 +13,13 @@ export default function HeaderSection() {
 
   return (
     <>
-      <header className='h-[100vh] w-full bg-[url("artboard.png")] lg:bg-cover mix-blend-color-dodge flex items-center justify-start bg-[100% 10%] bg-no-repeat'>
+      <header
+        className="h-[100vh] w-full lg:bg-cover mix-blend-color-dodge flex items-center justify-start bg-no-repeat"
+        style={{
+          backgroundImage: `url(${artboard})`,
+          backgroundPosition: "100% 10%"
+        }}
+      >
         <div className="container flex flex-col gap-5 flex-wrap px-4 lg:px-12">
           <div className="flex justify-between items-center">
             <div className="text-lg font-bold font-lato flex items-center gap-2">

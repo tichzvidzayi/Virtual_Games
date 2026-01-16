@@ -1,4 +1,4 @@
-# Game Board
+# Virtual Games (VR)
 
 ## Table of Contents
 - [Project Overview](#project-overview)
@@ -87,7 +87,10 @@ The app will now be running locally, and you can access it in your browser at ht
 - Advanced Filtering: Add options for filtering games by category, genre, and release date.
 
 
- 
+ ## 
+ ```
+ Live on  : https://tichvr.netlify.app/
+ ```
 ## Notes
 
 The project also has screenshots folder attached 
