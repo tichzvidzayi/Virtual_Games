@@ -1,4 +1,4 @@
-# Game_Board
+# Game Board
 
 ## Table of Contents
 - [Project Overview](#project-overview)
